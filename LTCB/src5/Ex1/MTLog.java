@@ -1,4 +1,4 @@
-package Ex5_1;
+package Ex1;
 
 public class MTLog implements ILog {
 
@@ -6,13 +6,10 @@ public class MTLog implements ILog {
 	public String toString() {
 		return "";
 	}
-
 	@Override
 	public boolean equals(Object obj) {
-		if (obj == null || !(obj instanceof MTLog))
+		if (obj == null || !(obj instanceof Date))
 			return false;
-		else {
-			return true;
-		}
+		return true;
 	}
 }

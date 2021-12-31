@@ -1,12 +1,12 @@
 /**
  * 
  */
-package Ex5_1;
+package Ex5_2;
 
 /**
  * @author lethanhtam
  *
  */
-public interface ILog {
+public interface IRestaurant {
 
 }
