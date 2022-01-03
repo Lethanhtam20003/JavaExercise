@@ -13,7 +13,6 @@ public class Entry {
 	 * @param comment
 	 */
 	public Entry(Date date, double distantse, int duration, String comment) {
-		super();
 		this.date = date;
 		this.distantse = distantse;
 		this.duration = duration;

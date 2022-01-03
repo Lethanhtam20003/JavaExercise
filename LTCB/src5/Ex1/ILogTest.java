@@ -13,9 +13,9 @@ public class ILogTest extends TestCase {
 		ILog l1 = new ConsLog(e3,empty);
 		ILog l2 = new ConsLog(e2,l1);
 		ILog l3 = new ConsLog(e1,l2);
-		
-		System.out.println(l3);
 		ILog all = new ConsLog(e1,new ConsLog(e2, new ConsLog(e3, new MTLog())));
 		assertEquals(l3, all);
+		
+     	System.out.println(l3);
 	}
 }
