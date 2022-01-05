@@ -1,0 +1,16 @@
+/**
+ * 
+ */
+package Ex5_2;
+
+/**
+ * @author lethanhtam
+ *
+ */
+public class ConsRestaurant implements IRestaurant {
+	 private Restaurant first;
+	 private IRestaurant rest;
+	public ConsRestaurant(Restaurant first, IRestaurant rest) {
+		this.first = first;
+		this.rest = rest;
+}

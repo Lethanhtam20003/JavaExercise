@@ -1,0 +1,9 @@
+package Ex5_2;
+
+public class MTRestaurant implements IRestaurant {
+@Override
+public String toString() {
+	// TODO Auto-generated method stub
+	return "";
+}
+}

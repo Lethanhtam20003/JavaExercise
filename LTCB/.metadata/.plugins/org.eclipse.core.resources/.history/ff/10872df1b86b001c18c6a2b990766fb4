@@ -1,0 +1,7 @@
+package Ex5_2;
+
+import junit.framework.TestCase;
+
+public class RestaurantTest extends TestCase {
+
+}

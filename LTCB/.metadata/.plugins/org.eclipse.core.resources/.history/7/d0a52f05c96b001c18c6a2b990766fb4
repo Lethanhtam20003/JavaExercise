@@ -1,0 +1,12 @@
+package Ex5_3;
+
+public class ConsInventory implements Inventory {
+	private Toy first;
+	private Inventory rest;
+	public ConsInventory(Toy first, Inventory rest) {
+		super();
+		this.first = first;
+		this.rest = rest;
+	}
+	
+}

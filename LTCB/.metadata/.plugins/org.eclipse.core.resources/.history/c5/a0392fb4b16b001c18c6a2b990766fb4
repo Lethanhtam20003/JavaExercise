@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package Ex5_2;
+
+/**
+ * @author lethanhtam
+ *
+ */
+public class ConsRestaurant implements IRestaurant {
+
+}

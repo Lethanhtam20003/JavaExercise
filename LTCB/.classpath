@@ -6,7 +6,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
-	<classpathentry kind="src" path="src1"/>
 	<classpathentry kind="src" path="src2"/>
 	<classpathentry kind="src" path="src3"/>
 	<classpathentry kind="src" path="z_ontap_1"/>

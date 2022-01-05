@@ -1,0 +1,11 @@
+package Ex5_2;
+
+public class Intersection {
+	 private Restaurant first;
+	 private IRestaurant rest;
+	public Intersection(Restaurant first, IRestaurant rest) {
+		super();
+		this.first = first;
+		this.rest = rest;
+	}
+}

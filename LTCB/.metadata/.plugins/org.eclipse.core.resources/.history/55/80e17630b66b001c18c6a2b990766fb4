@@ -1,0 +1,12 @@
+package Ex5_2;
+
+public class PriceRange {
+	private int max;
+	private int min;
+	public PriceRange(int max, int min) {
+		super();
+		this.max = max;
+		this.min = min;
+	}
+	
+}
