@@ -1,7 +1,0 @@
-package Ex5_3;
-
-import junit.framework.TestCase;
-
-public class Mouth extends TestCase {
-
-}

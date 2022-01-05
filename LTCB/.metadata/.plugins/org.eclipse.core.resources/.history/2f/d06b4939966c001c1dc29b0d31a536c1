@@ -1,9 +1,0 @@
-package Ex5_3;
-
-public class MTInventory implements Inventory {
-	@Override
-	public String toString() {
-		// TODO Auto-generated method stub
-		return "";
-	}
-}

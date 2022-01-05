@@ -14,4 +14,26 @@ public class MTInventory implements Inventory {
 			return true;
 		}
 	}
+	
+	@Override
+	public boolean contains(String nameOfInventory) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+	
+	@Override
+	public boolean isBelow(double threshoud) {
+		// TODO Auto-generated method stub
+		return true;
+	}
+	@Override
+	public int howmany() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	@Override
+	public Inventory raisePrice(double raice) {
+		// TODO Auto-generated method stub
+		return new MTInventory();
+	}
 }

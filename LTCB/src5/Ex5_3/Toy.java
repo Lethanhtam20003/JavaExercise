@@ -11,7 +11,7 @@ public class Toy {
 		this.price = price;
 		this.available = available;
 	}
-
+	
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
@@ -28,4 +28,20 @@ public class Toy {
 			return this.name.equals(that.name) && this.price == that.price && this.available == that.available;
 		}
 	}
+
+	public boolean contains(String nameOfInventory) {
+		// TODO Auto-generated method stub
+		return this.name.equals(nameOfInventory);
+	}
+	
+	public boolean isBelow(double threshoud) {
+		// TODO Auto-generated method stub
+		return this.price < threshoud;
+	}
+
+	public Toy copyraisePrice(double raice) {
+		// TODO Auto-generated method stub
+		return new Toy(this.name ,this.price + this.price* raice,this.available);
+	}
+
 }
