@@ -18,7 +18,7 @@ public class ConsRestaurant implements IRestaurant {
 
 	@Override
 	public String toString() {
-		return "first :" + this.first.toString() + " rest: " + this.rest.toString();
+		return "first :" + this.first.toString() + "\n rest: " + this.rest.toString();
 	}
 
 	@Override

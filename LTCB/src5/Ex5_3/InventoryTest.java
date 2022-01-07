@@ -21,11 +21,7 @@ public class InventoryTest extends TestCase {
 
 		System.out.println(i3);
 
-		Inventory all = new ConsInventory(doll,
-
-		new ConsInventory(robot,
-
-		new ConsInventory(gun, new MTInventory())));
+		Inventory all = new ConsInventory(doll,new ConsInventory(robot,new ConsInventory(gun, new MTInventory())));
 
 		System.out.println(all);
 

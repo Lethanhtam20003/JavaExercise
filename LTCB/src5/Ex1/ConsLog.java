@@ -21,7 +21,7 @@ public class ConsLog implements ILog {
 	}
 	@Override
 	public String toString() {
-		return "first=" + this.first.toString() + ", rest=" + this.rest + "]";
+		return "first : " + this.first.toString() + "\n  rest : " + this.rest.toString() + "\n ";
 	} 
 	@Override
 	public boolean equals(Object obj) {

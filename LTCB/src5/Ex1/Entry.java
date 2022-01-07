@@ -21,9 +21,9 @@ public class Entry {
 
 	@Override
 	public String toString() {
-		return "date=" + this.date.toString() + ", distantse=" + this.distantse +
-				", duration=" + this.duration
-				+ ", comment=" + comment ;
+		return "date : " + this.date.toString() + ", distantse : " + this.distantse 
+				+ ", duration=" + this.duration
+				+ ", comment=" + this.comment + "\n"  ;
 	}
 	@Override
 	public boolean equals(Object obj) {

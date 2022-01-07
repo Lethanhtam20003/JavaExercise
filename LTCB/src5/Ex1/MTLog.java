@@ -4,12 +4,15 @@ public class MTLog implements ILog {
 
 	@Override
 	public String toString() {
-		return "";
+		return " empty ";
 	}
 	@Override
 	public boolean equals(Object obj) {
-		if (obj == null || !(obj instanceof Date))
+		if (obj == null || !(obj instanceof MTLog)) {
 			return false;
-		return true;
+		}else {
+			return true;
+		}
 	}
+	
 }
