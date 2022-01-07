@@ -18,31 +18,6 @@ public class Address {
 		this.nameStreet = nameStreet;
 		this.nameCity = nameCity;
 	}
-
-	public int getHouse() {
-		return house;
-	}
-
-	public void setHouse(int house) {
-		this.house = house;
-	}
-
-	public String getNameStreet() {
-		return nameStreet;
-	}
-
-	public void setNameStreet(String nameStreet) {
-		this.nameStreet = nameStreet;
-	}
-
-	public String getNameCity() {
-		return nameCity;
-	}
-
-	public void setNameCity(String nameCity) {
-		this.nameCity = nameCity;
-	}
-
 	/**
 	 * chung mot thanh pho minh muon; which checks whether the advertised house is
 	 * in some given city (assume we give the method a city name);

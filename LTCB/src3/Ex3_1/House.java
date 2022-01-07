@@ -2,7 +2,6 @@
  * 
  */
 package Ex3_1;
-
 /**
  * @author lethanhtam Develop a "real estate assistant'' program. The
  *         "assistant'' helps the real estate agent locate houses of interest
@@ -31,50 +30,16 @@ public class House {
 	/**
 	 * location vi tri
 	 */
-	private Address Address;
+	private Address address;
 
-	/**
-	 * @param kind
-	 * @param numberOfRoom
-	 * @param price
-	 * @param location
-	 */
-	public House(String kind, int numberOfRoom, double price, Address Address) {
+	
+
+	public House(String kind, int numberOfRoom, double price, Address address) {
+		super();
 		this.kind = kind;
-		NumberOfRoom = numberOfRoom;
+		this.NumberOfRoom = numberOfRoom;
 		this.price = price;
-		this.Address = Address;
-	}
-	public String getKind() {
-		return kind;
-	}
-
-	public void setKind(String kind) {
-		this.kind = kind;
-	}
-
-	public int getNumberOfRoom() {
-		return NumberOfRoom;
-	}
-
-	public void setNumberOfRoom(int numberOfRoom) {
-		NumberOfRoom = numberOfRoom;
-	}
-
-	public double getPrice() {
-		return price;
-	}
-
-	public void setPrice(double price) {
-		this.price = price;
-	}
-
-	public Address getAddress() {
-		return Address;
-	}
-
-	public void setAddress(Address address) {
-		Address = address;
+		this.address = address;
 	}
 
 	/**
@@ -101,7 +66,7 @@ public class House {
 	 * @return
 	 */
 	public boolean inthiscity(String city) {
-		return this.Address.inthiscity(city);
+		return this.address.inthiscity(city);
 	}
 
 	/**
@@ -115,7 +80,7 @@ public class House {
 	 * @return
 	 */
 	public boolean samecity(House that) {
-		return this.Address.samecity(that.Address);
+		return this.address.samecity(that.address);
 	}
 
 }
