@@ -5,7 +5,9 @@ public class MTInventory implements Inventory {
 	public String toString() {
 		// TODO Auto-generated method stub
 		return "";
-	}@Override
+	}
+	
+	@Override
 	public boolean equals(Object obj) {
 		// TODO Auto-generated method stub
 		if (obj == null || !(obj instanceof MTInventory)) {
@@ -26,14 +28,47 @@ public class MTInventory implements Inventory {
 		// TODO Auto-generated method stub
 		return true;
 	}
+	
 	@Override
 	public int howmany() {
 		// TODO Auto-generated method stub
 		return 0;
 	}
+	
 	@Override
 	public Inventory raisePrice(double raice) {
 		// TODO Auto-generated method stub
 		return new MTInventory();
 	}
+	
+	@Override
+	public void raisePriceMutable(double rate) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	@Override
+	public double averagePrice() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	
+	@Override
+	public double sumPrice() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	
+	@Override
+	public Inventory replaceName(String that) {
+		// TODO Auto-generated method stub
+		return new MTInventory();
+	}
+	
+	@Override
+	public Inventory eliminate(String ToyOfName) {
+		// TODO Auto-generated method stub
+		return new MTInventory();
+	}
+
 }

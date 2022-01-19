@@ -39,7 +39,6 @@ public class ConsInventory implements Inventory {
 		return this.first.isBelow(threshoud) && this.rest.isBelow(threshoud);
 	}
 
-	
 	@Override
 	public int howmany() {
 		// TODO Auto-generated method stub
@@ -50,7 +49,44 @@ public class ConsInventory implements Inventory {
 	public Inventory raisePrice(double raice) {
 		// TODO Auto-generated method stub
 		Toy atoy = this.first.copyraisePrice(raice);
-		return new ConsInventory(atoy,this.rest.raisePrice(raice));
+		return new ConsInventory(atoy, this.rest.raisePrice(raice));
+	}
+
+	@Override
+	public void raisePriceMutable(double rate) {
+		// TODO Auto-generated method stub
+		this.first.setNewPrice(rate);
+		this.rest.raisePriceMutable(rate);
+	}
+
+	public double sumPrice() {
+		return this.first.getPrice() + this.rest.sumPrice();
+	}
+
+	@Override
+	public double averagePrice() {
+		// TODO Auto-generated method stub
+		return (this.sumPrice() / (this.howmany()));
+	}
+
+	@Override
+	public Inventory replaceName(String that) {
+		// TODO Auto-generated method stub
+		if (this.first.getName().equals(that)) {
+			return new ConsInventory(this.first.changeName() ,this.rest.replaceName(that));
+		}else {			
+			return new ConsInventory(this.first, this.rest.replaceName(that) );
+		}
+	}
+
+	@Override
+	public Inventory eliminate(String ToyOfName) {
+		// TODO Auto-generated method stub
+		if (this.first.getName().equals(ToyOfName)) {
+			return this.rest.eliminate(ToyOfName);
+		}else {
+		return new ConsInventory(this.first,this.rest.eliminate(ToyOfName));
+		}
 	}
 
 }

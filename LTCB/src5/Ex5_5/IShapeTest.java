@@ -1,6 +1,5 @@
 package Ex5_5;
 
-import javax.management.openmbean.CompositeDataSupport;
 
 import junit.framework.TestCase;
 
