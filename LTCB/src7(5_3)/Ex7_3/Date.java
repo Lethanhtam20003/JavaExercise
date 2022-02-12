@@ -1,7 +1,7 @@
 /**
  * 
  */
-package Ex5_1;
+package Ex7_3;
 
 /**
  * @author lethanhtam
@@ -37,5 +37,7 @@ public class Date {
 					this.year == that.year;
 		}
 	}
-	
+	public boolean sameMonthInAYear(int month, int year) {
+		return this.month == month && this.year == year;
+	}
 }

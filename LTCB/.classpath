@@ -7,11 +7,14 @@
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="src6(5_2)"/>
+	<classpathentry kind="src" path="src7(5_3)"/>
+	<classpathentry kind="src" path="src8(5_4)"/>
+	<classpathentry kind="src" path="src5"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/3"/>
 	<classpathentry kind="src" path="src2"/>
 	<classpathentry kind="src" path="src3"/>
 	<classpathentry kind="src" path="z_ontap_1"/>
 	<classpathentry kind="src" path="src4"/>
-	<classpathentry excluding="ss/" kind="src" path="src5"/>
+	<classpathentry excluding="ss/" kind="src" path="src5_1"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

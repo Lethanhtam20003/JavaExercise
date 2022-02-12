@@ -1,4 +1,4 @@
-package Ex5_3;
+package Ex7_1;
 
 public class MTInventory implements Inventory {
 	@Override

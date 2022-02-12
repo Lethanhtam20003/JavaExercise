@@ -43,8 +43,8 @@ public class Rectangle extends AShape{
 	  CartPT pt1 = new CartPT(1,2);
 	  CartPT pt2 = new CartPT(14,27);
 	  IShape s4 = new Rectangle(pt1,10,20)
-	  s4.contais(pt1);true
-	  s4.contais(pt2);false
+	  s4.contains(pt1);true
+	  s4.contains(pt2);false
 	 */
 	public boolean contains(CartPT that) {
 		// TODO Auto-generated method stub

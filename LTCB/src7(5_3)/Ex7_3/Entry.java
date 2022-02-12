@@ -1,4 +1,4 @@
-package Ex5_1;
+package Ex7_3;
 
 public class Entry {
 	private Date date;
@@ -37,5 +37,11 @@ public class Entry {
 					this.comment.equals(that.comment);
 					
 		}
+	}
+	public double getDistatse() {
+		return this.distantse;
+	}
+	public boolean sameMonthInAYear(int month, int year) {
+		return this.date.sameMonthInAYear(month, year);
 	}
 }

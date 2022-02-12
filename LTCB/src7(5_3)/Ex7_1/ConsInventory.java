@@ -1,4 +1,4 @@
-package Ex5_3;
+package Ex7_1;
 
 public class ConsInventory implements Inventory {
 	private Toy first;
