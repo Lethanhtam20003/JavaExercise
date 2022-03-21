@@ -53,7 +53,7 @@ public class ILogTest extends TestCase {
 		 assertEquals(l2.getLog(6, 2005),t2 );
 		 assertEquals(l3.getLog(6, 2005),t3);
 	}
-	public void testgetLog() {
+	public void testTotalDistance() {
 		//Testing for the tatalDistance
 		Entry e1 = new Entry(new Date(5, 5, 2002), 5.0, 25, "good");
 		Entry e2 = new Entry(new Date(5, 6, 2005), 5.0, 25, "tired");

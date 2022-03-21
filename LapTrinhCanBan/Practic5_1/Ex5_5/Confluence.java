@@ -1,4 +1,5 @@
-package Ex5_4;
+package Ex5_5;
+
 
 public class Confluence extends ARiver{
 	private ARiver left;

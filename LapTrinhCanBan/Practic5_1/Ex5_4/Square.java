@@ -1,4 +1,4 @@
-package Ex5_5;
+package Ex5_4;
 
 public class Square extends ASingleShape{
 	private int radium;

@@ -1,4 +1,4 @@
-package Ex5_5;
+package Ex5_4;
 
 public class ASingleShape implements IShape {
 	private CartPT location;

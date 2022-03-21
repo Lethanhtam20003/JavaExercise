@@ -11,6 +11,5 @@ public class APersonTest extends TestCase {
 		APerson p5 = new APerson("annie",1938,p4,null);
 		APerson p6 = new APerson("paul",1956,null,p5);
 		APerson pmain = new APerson("peter",1980,p3,p6);
-		//System.out.println(p1);
 	}
 }

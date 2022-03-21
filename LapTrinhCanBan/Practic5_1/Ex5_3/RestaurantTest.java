@@ -1,4 +1,4 @@
-package Ex5_2;
+package Ex5_3;
 
 import junit.framework.TestCase;
 

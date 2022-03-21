@@ -6,7 +6,7 @@ public class Entry {
 	private double distantse;
 	private int duration;
 	private String comment;
-
+	private double howFast = this.distantse/((double)this.duration/60);
 	/**
 	 * @param date
 	 * @param distantse
@@ -19,11 +19,13 @@ public class Entry {
 		this.duration = duration;
 		this.comment = comment;
 	}
-
+	
 	@Override
 	public String toString() {
-		return "date : " + this.date.toString() + ", distantse : " + this.distantse 
-				+ ", duration=" + this.duration
+		return "date : " + this.date.toString() 
+				+ ", distantse : " + this.distantse 
+				+ ", duration=" + this.duration 
+				+ ",How fast: " + this.howFast + "km/h"
 				+ ", comment=" + this.comment + "\n"  ;
 	}
 	@Override
@@ -45,4 +47,7 @@ public class Entry {
 	public boolean sameMonthInAYear(int month, int year) {
 		return this.date.sameMonthInAYear(month, year);
 	}
+	
+	
+	
 }

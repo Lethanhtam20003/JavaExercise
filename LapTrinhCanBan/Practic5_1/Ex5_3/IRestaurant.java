@@ -1,7 +1,7 @@
 /**
  * 
  */
-package Ex5_2;
+package Ex5_3;
 
 /**
  * @author lethanhtam

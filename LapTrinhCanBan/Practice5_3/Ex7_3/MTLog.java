@@ -14,6 +14,9 @@ public class MTLog implements ILog {
 			return true;
 		}
 	}
+	
+
+	
 	@Override
 	public double miles() {
 		// TODO Auto-generated method stub

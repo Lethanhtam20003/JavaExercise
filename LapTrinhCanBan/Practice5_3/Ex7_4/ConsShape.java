@@ -11,7 +11,7 @@ public class ConsShape implements IShape {
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return this.first.toString() +"\n"+this.rest.toString();
+		return this.first.toString() +"\n" +this.rest.toString();
 	}
 	@Override
 	public boolean equals(Object obj) {

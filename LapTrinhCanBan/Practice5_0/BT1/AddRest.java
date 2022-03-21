@@ -33,8 +33,8 @@ public class AddRest {
 		}else {
 			AddRest that = (AddRest)obj;
 			return this.house == that.house 
-					&& this.nameOfStreet == that.nameOfStreet 
-					&& this.nameOfCity == that.nameOfCity;
+					&& this.nameOfStreet.equals(that.nameOfStreet)
+					&& this.nameOfCity.equals(that.nameOfCity);
 		}
 	}
 }
