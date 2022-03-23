@@ -25,15 +25,6 @@ public class MTLog implements ILog {
 		// TODO Auto-generated method stub
 		return 0;
 	}
-	@Override
-	public double maxHelper(double distatse) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-	@Override
-	public double maxDistanse() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
+	
 	
 }

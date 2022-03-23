@@ -34,7 +34,7 @@ public class ConsPhone implements IDirectory{
 	@Override
 	public APhoneNumber phoneNumber(long number,String name) {
 		// TODO Auto-generated method stub
-		if ((this.first.getNumber() == number) == true || (this.first.getName().equals(name))==true ) {
+		if (this.first.sameNameOrNumber(number, name)) {
 			return this.first;
 		}
 		return this.rest.phoneNumber(number,name);

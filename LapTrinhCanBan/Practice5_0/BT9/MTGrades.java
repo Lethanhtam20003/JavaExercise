@@ -32,26 +32,16 @@ public class MTGrades implements IGrades {
 	}
 
 	@Override
-	public IGrades sortByGradeDec() {
+	public IGrades softByGradeDec() {
 		// TODO Auto-generated method stub
 		return new MTGrades();
 	}
 
 	@Override
-	public IGrades insertInGradeOrder(GradeRecord g) {
+	public IGrades insertInGradeOrther(GradeRecord g) {
 		// TODO Auto-generated method stub
 		return new ConsGrades(g, new MTGrades());
 	}
 
-	@Override
-	public IGrades greaterThanList(double grades) {
-		// TODO Auto-generated method stub
-		return new MTGrades();
-	}
-
-	@Override
-	public IGrades insertInGradeOrder2(GradeRecord g, double number) {
-		// TODO Auto-generated method stub
-		return new ConsGrades(g, new MTGrades()); 
-	}
+	
 }

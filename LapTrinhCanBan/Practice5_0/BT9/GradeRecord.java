@@ -18,7 +18,7 @@ public class GradeRecord {
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return " Course: " + this.course.toString() +  " - Grade: " +this.grade;
+		return this.course.toString() +  " \t\t - Grade: " +this.grade;
 	}
 	@Override
 	public boolean equals(Object obj) {
@@ -27,7 +27,8 @@ public class GradeRecord {
 			return false;
 		}else {
 			GradeRecord that = (GradeRecord)obj;
-			return this.course.equals(that.course) && this.grade==that.grade;
+			return this.course.equals(that.course) 
+					&& this.grade==that.grade;
 		}
 	}
 	public int getCridit() {
@@ -40,8 +41,6 @@ public class GradeRecord {
 		// TODO Auto-generated method stub
 		return this.grade >= that.grade;
 	}
-	public boolean gradesSmallNumber(double number) {
-		return this.grade >= number;
-	}
+	
 
 }

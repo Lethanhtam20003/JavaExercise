@@ -9,7 +9,5 @@ package BT5;
 public interface ILog {
 	public double totalDistanceInMonth(int month, int year);
 	public double maximumDistance();
-	public double maxDistanse() ;
-	public double maxHelper(double distatse);
 	
 }

@@ -44,4 +44,9 @@ public class Entry {
 	public boolean sameMonthInAYear(int month, int year) {
 		return this.date.sameMonthInAYear(month, year);
 	}
+
+	public boolean distanceMax(double distanceMax) {
+		// TODO Auto-generated method stub
+		return this.distance > distanceMax;
+	}
 }

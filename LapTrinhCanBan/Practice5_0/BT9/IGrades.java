@@ -6,9 +6,7 @@ public interface IGrades {
 	   public double sumGrade();
 	   public double gradeAverage();
 	   
-	   public IGrades sortByGradeDec();
-	   public IGrades insertInGradeOrder(GradeRecord g);
+	   public IGrades softByGradeDec();
+	   public IGrades insertInGradeOrther(GradeRecord g);
 	   
-	   public IGrades greaterThanList(double grades);
-	   public IGrades insertInGradeOrder2(GradeRecord g , double number);
 }

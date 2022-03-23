@@ -5,4 +5,9 @@ public abstract class AShape {
 	public abstract boolean between(int a, int b);
 	public abstract Square boundingBox();
 	public abstract CartPT translate();
+	@Override
+	public abstract String toString();
+	@Override
+	public abstract boolean equals(Object obj);
+	
 }

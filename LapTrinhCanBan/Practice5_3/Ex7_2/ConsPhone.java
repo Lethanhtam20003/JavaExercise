@@ -28,4 +28,19 @@ public class ConsPhone implements IDirectory{
 					
 		}
 	}
+	/**
+	 * whoseNumber, which determines the name that goes
+	 * with some given phone number and phone directory.
+	 * @param number
+	 * @return
+	 */
+	@Override
+	public APhoneNumber WhoseNumber(String Name) {
+		// TODO Auto-generated method stub
+		if(this.first.ditermineName(Name)) {
+			return this.first;
+		}else {
+		return this.rest.WhoseNumber(Name);
+		}
+	}
 }

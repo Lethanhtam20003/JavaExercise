@@ -33,7 +33,7 @@ public class IDirectoryTest extends TestCase {
 	      //Testing for the constructor of ConsPhone
 	      IDirectory i2 = new ConsPhone(p1, new ConsPhone(p2, new ConsPhone(p3, new MTDirectory())));
 	      
-	      System.out.println("phoneNUmber ===="+i1.phoneNumber(927582967, "TUAN"));
-	      assertEquals(i1.phoneNumber(927582967, "TUAN"),	p1);
+	      System.out.println("phoneNUmber ===="+i2.phoneNumber(343381361, "Tam"));
+	      assertEquals(i2.phoneNumber(927582967, "TUAN"),new APhoneNumber("TUAN",927582967));
 	}
 }

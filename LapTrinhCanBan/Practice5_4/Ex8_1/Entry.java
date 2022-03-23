@@ -32,6 +32,6 @@ public class Entry {
 		}
 	}
 	public boolean khoangCachNganHon(Entry that) {
-		return this.distanse > that.distanse;
+		return this.distanse < that.distanse;
 	}
 }

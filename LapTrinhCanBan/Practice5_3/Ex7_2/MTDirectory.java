@@ -7,5 +7,16 @@ public class MTDirectory implements IDirectory {
 	public String toString() {
 		return "";
 	}
+	/**
+	 * whoseNumber, which determines the name that goes
+	 * with some given phone number and phone directory.
+	 * @param number
+	 * @return
+	 */
+	@Override
+	public APhoneNumber WhoseNumber(String Name) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 }

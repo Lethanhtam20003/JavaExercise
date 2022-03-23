@@ -57,20 +57,6 @@ public class ConsLog implements ILog {
 		// TODO Auto-generated method stub
 		return Math.max(this.first.getDistatse(), this.rest.maximumDistance());
 	}
-	/**
-	 * Exercise 5.2.2 
-	 * Testing for the maximunDistance
-	 * 
-	 */
-	public double maxDistanse() {
-		return maxHelper(this.first.getDistatse());
-	}
-	public double maxHelper(double distanceMax) {
-		// TODO Auto-generated method stub
-		if(  this.first.getDistatse() > distanceMax) 
-			return this.rest.maxHelper(this.first.getDistatse());	
-		else
-			return this.rest.maxHelper(distanceMax);
-	}
+
 	
 }

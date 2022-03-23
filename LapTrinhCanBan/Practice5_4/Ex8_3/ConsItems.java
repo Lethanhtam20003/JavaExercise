@@ -26,7 +26,9 @@ public class ConsItems implements IItems {
 					&& this.rest.equals(that.rest);
 		}
 	}
-
+	/**
+	 * howMany, which computes the number of items on the shopping list;
+	 */
 	@Override
 	public int howMany() {
 		// TODO Auto-generated method stub
@@ -42,6 +44,10 @@ public class ConsItems implements IItems {
 			return new ConsItems(this.first, this.rest.createSoftItems(n));
 		}
 	}
+	 /**
+	  * highestPrice, which determines the highest unit price
+	  * among all items in the shopping list.
+	  */
 	@Override
 	public IItems highestPrice() {
 		// TODO Auto-generated method stub

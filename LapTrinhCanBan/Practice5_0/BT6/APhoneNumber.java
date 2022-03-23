@@ -29,6 +29,10 @@ public class APhoneNumber {
 			return this.name == that.name && this.number == that.number;
 		}
 	}
+	
+	public boolean sameNameOrNumber(long number,String name) {
+		return	(this.name.equals(name))||(this.number == number);
+	}
 	public long getNumber() {
 		return this.number;
 	}

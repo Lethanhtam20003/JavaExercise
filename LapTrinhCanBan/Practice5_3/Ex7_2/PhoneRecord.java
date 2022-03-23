@@ -31,4 +31,8 @@ public class PhoneRecord {
 			return this.phone.equals(that.phone) && this.minutes == that.minutes && this.second == that.second;
 		}
 	}
+	public boolean ditermineName(String name) {
+		// TODO Auto-generated method stub
+		return this.phone.getname().equals(name);
+	}
 }

@@ -3,14 +3,14 @@ package Ex7_2;
 
 public class APhoneNumber {
 	private String name;
-	private int number;
+	private long number;
 	/*
 	 * Testing for the constructor of APhoneNumber
 	 * APhoneNumber p1 = new APhoneNumber("TAM", 0343381360);
 	 * APhoneNumber p2 = new APhoneNumber("TUAN", 0926455321);
 	 * APhoneNumber P3 = new APhoneNumber("NHI", 9327555654);
 	 */
-	public APhoneNumber(String name, int number) {
+	public APhoneNumber(String name, long number) {
 		super();
 		this.name = name;
 		this.number = number;
@@ -28,5 +28,19 @@ public class APhoneNumber {
 			APhoneNumber that = ( APhoneNumber)obj;
 			return this.name == that.name && this.number == that.number;
 		}
+	}
+	
+	public String getname() {
+		// TODO Auto-generated method stub
+		return this.name;
+	}
+	/** 
+	 * subMethod of the whoseNumber
+	 * @param Name
+	 * @return
+	 */
+	public boolean ditermineName(String Name) {
+		// TODO Auto-generated method stub
+		return this.name.equals(Name);
 	}
 }

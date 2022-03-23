@@ -20,7 +20,7 @@ class Course {
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return "number: "+this.number +" - title: "+this.title +", cridits: "+this.cridits;
+		return "id: "+this.number +" \t  - title: "+this.title +", \t cridits: "+this.cridits;
 	}
 	@Override
 	public boolean equals(Object obj) {
@@ -29,7 +29,9 @@ class Course {
 			return false;
 		}else {
 			Course that = (Course)obj;
-			return this.number==that.number && this.title== that.title && this.cridits==that.cridits;
+			return this.number==that.number 
+					&& this.title== that.title 
+					&& this.cridits==that.cridits;
 		}
 	}
 	public int getCridit() {

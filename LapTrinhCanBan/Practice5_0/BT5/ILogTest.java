@@ -46,17 +46,5 @@ public class ILogTest extends TestCase {
 		
 		 assertEquals(l3.maximumDistance(),7.0);
 	}
-	public void testMaxDistance() {
-		//Testing for the getLog
-		Entry e1 = new Entry(new Date(13, 5, 2002), 5.0, 25, "good");
-		Entry e2 = new Entry(new Date(14, 6, 2005), 6.0, 25, "tired");
-		Entry e3 = new Entry(new Date(15, 6, 2005), 7.0, 25, "great");
-				
-		ILog empty = new MTLog();
-		ILog l1 = new ConsLog(e1,empty);
-		ILog l2 = new ConsLog(e2,l1);
-		ILog l3 = new ConsLog(e3,l2);
-		assertEquals(l3.maxDistanse(), 7.0);
-		
-	}
+
 }

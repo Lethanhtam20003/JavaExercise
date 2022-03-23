@@ -1,12 +1,12 @@
 package Ex7_4;
 
+
 public class MTShape implements IShape {
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
 		return  "" ;
 	}
-
 	@Override
 	public double distanseToO() {
 		// TODO Auto-generated method stub
@@ -24,7 +24,7 @@ public class MTShape implements IShape {
 	@Override
 	public ConsShape boundingBox() {
 		// TODO Auto-generated method stub
-		return null;
+		return new ConsShape( new Square(new CartPT(0, 0),0), new MTShape());
 	}
 
 	
