@@ -7,7 +7,11 @@ public class MTDirectory implements IDirectory {
 	public String toString() {
 		return "";
 	}
-
+	public boolean equals(Object obj) {
+		if (obj == null || !(obj instanceof MTDirectory))
+			return false;
+		return true;
+	}
 	@Override
 	public IDirectory phoneNumber(int number) {
 		// TODO Auto-generated method stub

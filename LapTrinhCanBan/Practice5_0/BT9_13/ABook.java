@@ -93,9 +93,7 @@ public abstract class ABook {
 	 * @param that
 	 * @return
 	 */
-	public boolean sameAthor(ABook that) {
-		return this.author.compareTo(that.author)<0;
-	}
+
 
 	public boolean sameAuthor(String authorName) {
 		// TODO Auto-generated method stub
@@ -103,6 +101,6 @@ public abstract class ABook {
 	}
 
 	protected  boolean softByOrther(ABook b) {
-		return this.price <= b.price;
+		return this.author.compareTo(b.author)<0;
 	}
 }

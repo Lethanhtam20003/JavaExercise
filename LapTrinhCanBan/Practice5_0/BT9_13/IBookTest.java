@@ -33,7 +33,7 @@ public class IBookTest extends TestCase {
 
 	public void testSoftByTitle() {
 		IBook b = new ConsBook(b3, new ConsBook(b2, new ConsBook(b1, new MTBook())));
-		assertEquals(b.softByTitle(), new ConsBook(b3, new ConsBook(b2, new ConsBook(b1, new MTBook()))));
+		assertEquals(b.softByTitle(), new ConsBook(b1, new ConsBook(b2, new ConsBook(b3, new MTBook()))));
 	}
 
 }

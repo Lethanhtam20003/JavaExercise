@@ -1,7 +1,9 @@
 package BT6;
 
 public interface IDirectory {
-	public IDirectory phoneNumber(int number);
-	public IDirectory whoseNumber(String name);
 
+	public IDirectory whoseNumber(String number);
+	
+
+	public IDirectory phoneNumber(int name);
 }

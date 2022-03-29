@@ -27,8 +27,8 @@ public class ABookTest extends TestCase {
 	}
 
 	public void testSameAthor() {
-		assertEquals(b1.sameAthor(b1), true);
-		assertEquals(b2.sameAthor(b3), false);
+		assertEquals(b2.sameAuthor("nam cao"), true);
+		assertEquals(b2.sameAuthor("vu trong phung"), false);
 	}
 
 }
