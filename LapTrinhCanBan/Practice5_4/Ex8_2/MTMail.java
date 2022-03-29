@@ -1,5 +1,6 @@
 package Ex8_2;
 
+
 public class MTMail implements IMail {
 	
 	@Override

@@ -1,5 +1,6 @@
 package Ex8_3;
 
+
 public class MTItems implements IItems {
 	@Override
 	public String toString() {
@@ -22,16 +23,20 @@ public class MTItems implements IItems {
 		// TODO Auto-generated method stub
 		return 0;
 	}
-
+	
 	@Override
-	public IItems highestPrice() {
+	public double highestPrice() {
 		// TODO Auto-generated method stub
-		return new MTItems();
+		return 0;
+	}
+	@Override
+	public String brandList() {
+		// TODO Auto-generated method stub
+		return "";
 	}
 
-	@Override
-	public IItems createSoftItems(AItems n) {
-		// TODO Auto-generated method stub
-		return new ConsItems(n, new MTItems());
-	}
+	
+
+	
+
 }

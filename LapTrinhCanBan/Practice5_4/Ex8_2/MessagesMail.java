@@ -1,5 +1,6 @@
 package Ex8_2;
 
+
 public class MessagesMail {
 	private String from;
 	private String To;

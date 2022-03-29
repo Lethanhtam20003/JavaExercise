@@ -25,6 +25,16 @@ public class MTLog implements ILog {
 		// TODO Auto-generated method stub
 		return 0;
 	}
+	@Override
+	public ILog softBySpeed() {
+		// TODO Auto-generated method stub
+		return new MTLog();
+	}
+	@Override
+	public ILog insertILogorther(Entry that) {
+		// TODO Auto-generated method stub
+		return new ConsLog(that, new MTLog());
+	}
 	
 	
 }

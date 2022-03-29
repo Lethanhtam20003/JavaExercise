@@ -13,9 +13,10 @@ public class ConsPhone implements IDirectory{
 		this.first = first;
 		this.rest = rest;
 	}
+	
 	@Override
 	public String toString() {
-		return  this.first + "\n" + this.rest;
+		return  this.first.toString() + "\n" + this.rest.toString();
 	}
 	@Override
 	public boolean equals(Object obj) {
@@ -31,12 +32,19 @@ public class ConsPhone implements IDirectory{
 	/**
 	 * exercise 
 	 */
-	@Override
-	public APhoneNumber phoneNumber(long number,String name) {
-		// TODO Auto-generated method stub
-		if (this.first.sameNameOrNumber(number, name)) {
-			return this.first;
+	public IDirectory phoneNumber(int number) {
+		if (this.first.getNumber()==number)
+			return new ConsPhone(this.first, this.rest.phoneNumber(number));
+		else {
+			return this.rest.phoneNumber(number);
 		}
-		return this.rest.phoneNumber(number,name);
+	}
+
+	public IDirectory whoseNumber(String name) {
+		if (this.first.getName().equals(name))
+			return new ConsPhone(this.first, this.rest.whoseNumber(name));
+		else {
+			return this.rest.whoseNumber(name);
+		}
 	}
 }

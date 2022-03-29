@@ -1,5 +1,6 @@
 package Ex8_2;
 
+
 public class Date {
 	private int day;
 	private int month;

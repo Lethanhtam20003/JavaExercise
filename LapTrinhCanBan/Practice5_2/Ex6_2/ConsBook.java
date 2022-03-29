@@ -1,5 +1,6 @@
 package Ex6_2;
 
+
 public class ConsBook implements IBook {
 	private ABook first;
 	private IBook rest;

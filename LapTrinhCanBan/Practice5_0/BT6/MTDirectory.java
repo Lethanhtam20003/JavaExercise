@@ -9,10 +9,17 @@ public class MTDirectory implements IDirectory {
 	}
 
 	@Override
-	public APhoneNumber phoneNumber(long number,String name) {
+	public IDirectory phoneNumber(int number) {
 		// TODO Auto-generated method stub
-		return null;
+		return new MTDirectory();
 	}
 
+	@Override
+	public IDirectory whoseNumber(String name) {
+		// TODO Auto-generated method stub
+		return new MTDirectory();
+	}
+
+	
 	
 }

@@ -4,7 +4,7 @@ package Ex8_3;
 public abstract class AItems {
 	private String name;
 	private double weight;
-	private int price;
+	private double price;
 	/**
 	 * Testing Constructor
 	 AItems i1 = new coffee("thai nguyen",0.23,400000,"regular");
@@ -14,7 +14,7 @@ public abstract class AItems {
 	 * @param weight
 	 * @param price
 	 */
-	public AItems(String name, double weight, int price) {
+	public AItems(String name, double weight, double price) {
 		this.name = name;
 		this.weight = weight;
 		this.price = price;
@@ -41,7 +41,7 @@ public abstract class AItems {
 	}
 
 
-	public int getPrice() {
+	public double getPrice() {
 		return price;
 	}
 
@@ -107,4 +107,9 @@ public abstract class AItems {
 	public boolean cheaperThan(AItems that) {
 		return this.unitprice()>that.unitprice();
 	}
+
+
+
+
+	
 }

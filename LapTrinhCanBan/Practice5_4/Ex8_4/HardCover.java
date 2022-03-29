@@ -23,6 +23,12 @@ public class HardCover extends ABook {
 	}
 
 	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return this.getTitle() + "\t\t  ** " + this.getAuthor()+" **  \t publication: "+this.getPublicionYear()+"\n \t\t\t\t price: "+this.getPrice();
+	}
+	
+	@Override
     /**
      *Testing salePrice
      ABook b2 = new HardCover("chi pheo", "nam cao", 100000, 1980);

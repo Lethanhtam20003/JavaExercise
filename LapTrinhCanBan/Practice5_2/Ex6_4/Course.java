@@ -3,7 +3,7 @@
  */
 package Ex6_4;
 
-import Ex6_2.ABook;
+import BT9_13.ABook;
 
 /**
  * @author lethanhtam

@@ -1,5 +1,6 @@
 package Ex8_5;
 
+
 public class Location {
 	private int x;
 	private int y;
@@ -10,5 +11,24 @@ public class Location {
 		this.y = y;
 		this.name = name;
 	}
+	/**
+	 * subMethod of ditermineLocation
+	 */
+	@Override
+	public boolean equals(Object obj) {
+		// TODO Auto-generated method stub
+		if(obj == null || !(obj instanceof Location)) {			
+			return false;
+		}else {
+			Location that = (Location)obj;
+			return this.x == that.x && this.y == that.y && this.name.equals(that.name);
+		}
+	}
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return "location: "+this.name +"("+this.x + "," +this.y+")";
+	}
+	
 	
 }

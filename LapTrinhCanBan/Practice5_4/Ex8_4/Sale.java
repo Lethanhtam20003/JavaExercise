@@ -21,7 +21,13 @@ public class Sale extends ABook {
 		super(title, author, price, publicionYear);
 		// TODO Auto-generated constructor stub
 	}
-
+	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return this.getTitle() + "\t\t  ** " + this.getAuthor()+" **  \t publication: "+this.getPublicionYear()+"\n \t\t\t\t price: "+this.getPrice();
+	}
+	
 	@Override
 	/**
 	 *Testing salePrice

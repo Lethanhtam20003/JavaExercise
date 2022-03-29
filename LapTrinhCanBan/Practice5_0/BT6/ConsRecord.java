@@ -14,7 +14,7 @@ public class ConsRecord implements IDirectory {
 	}
 	@Override
 	public String toString() {
-		return  this.first + "\n" + this.rest ;
+		return  this.first.toString() + "\n" + this.rest.toString() ;
 	}
 	@Override
 	public boolean equals(Object obj) {
@@ -28,10 +28,14 @@ public class ConsRecord implements IDirectory {
 		}
 	}
 	@Override
-	public APhoneNumber phoneNumber(long number,String name) {
+	public IDirectory phoneNumber(int number) {
 		// TODO Auto-generated method stub
 		return null;
 	}
-
+	@Override
+	public IDirectory whoseNumber(String name) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 }

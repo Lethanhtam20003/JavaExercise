@@ -3,7 +3,7 @@ package BT5;
 public class Entry {
 	private Date date;
 	private double distance;
-	private int duration;
+	private int duration; // time
 	private String comment;
 
 	/**
@@ -41,12 +41,31 @@ public class Entry {
 	public double getDistatse() {
 		return this.distance;
 	}
+	/**
+	 * subMethod of totalDistanceInMonth
+	 * @param month
+	 * @param year
+	 * @return
+	 */
 	public boolean sameMonthInAYear(int month, int year) {
 		return this.date.sameMonthInAYear(month, year);
 	}
-
-	public boolean distanceMax(double distanceMax) {
-		// TODO Auto-generated method stub
-		return this.distance > distanceMax;
+	/**
+	 * subMethod of softBySpeed
+	 * @return
+	 */
+	public double speed() {
+		return this.distance/this.duration;
 	}
+	/**
+	 * subMethod of softBySpeed
+	 * @param that
+	 * @return
+	 */
+	public boolean hasSpeedThan(Entry that) {
+		// TODO Auto-generated method stub
+		return this.speed() > that.speed();
+	}
+
+	
 }

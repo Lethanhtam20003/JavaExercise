@@ -1,5 +1,6 @@
 package Ex6_2;
 
+
 public class ABook {
 	private String name;
 	private String author;

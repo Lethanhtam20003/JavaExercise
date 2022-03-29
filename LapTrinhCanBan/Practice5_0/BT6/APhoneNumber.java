@@ -15,6 +15,7 @@ public class APhoneNumber {
 		this.name = name;
 		this.number = number;
 	}
+	
 	@Override
 	public String toString() {
 		return "APhoneNumber:  " + this.name + "    number: 0" + this.number;
@@ -26,13 +27,10 @@ public class APhoneNumber {
 			return false;
 		}else {
 			APhoneNumber that = ( APhoneNumber)obj;
-			return this.name == that.name && this.number == that.number;
+			return this.name.equals( that.name) && this.number == that.number;
 		}
 	}
 	
-	public boolean sameNameOrNumber(long number,String name) {
-		return	(this.name.equals(name))||(this.number == number);
-	}
 	public long getNumber() {
 		return this.number;
 	}

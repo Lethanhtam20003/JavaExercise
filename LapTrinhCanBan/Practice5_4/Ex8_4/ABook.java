@@ -13,6 +13,35 @@ public abstract class ABook {
 	protected String author;
 	protected  double price;
 	protected  int publicionYear;
+	@Override
+	public abstract String toString();
+
+	@Override
+	public boolean equals(Object obj) {
+		// TODO Auto-generated method stub
+		if(obj == null || !(obj instanceof ABook)) {
+			return false;
+		}else {
+			ABook that = (ABook)obj;
+		return this.getTitle().equals(that.getTitle())
+				&& this.getAuthor().equals(that.getAuthor())
+				&& this.getPrice() == that.getPrice()
+				&& this.getPublicionYear() == that.getPublicionYear();
+		}
+	}
+	
+	public String getTitle() {
+		return title;
+	}
+	public String getAuthor() {
+		return author;
+	}
+	public double getPrice() {
+		return price;
+	}
+	public int getPublicionYear() {
+		return publicionYear;
+	}
 	/**
 	 * Testing Constructor
 	  ABook b1 = new Sale("so do", "vu trong phung", 50000, 1998);
@@ -66,5 +95,14 @@ public abstract class ABook {
 	 */
 	public boolean sameAthor(ABook that) {
 		return this.author.equals(that.author);
+	}
+
+	public boolean sameAuthor(String authorName) {
+		// TODO Auto-generated method stub
+		return this.author.equals(authorName);
+	}
+
+	protected  boolean softByOrther(ABook b) {
+		return this.price <= b.price;
 	}
 }

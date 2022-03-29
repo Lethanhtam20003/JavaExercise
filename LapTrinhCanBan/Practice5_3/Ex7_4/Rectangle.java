@@ -1,72 +1,44 @@
 package Ex7_4;
 
-public class Rectangle extends AShape {
-	private CartPT location;
+public class Rectangle extends AShape{
 	private int width;
-	private int hight;
+	private int height;
 
-	/*
-	 * Testing for the Constructor ISingleShape s4 = new Rectangle(new CartPT(2, 4),
-	 * 4, 2);
+	/**
+	 * @param location
+	 * @param width
+	 * @param height
 	 */
-	public Rectangle(CartPT location, int width, int hight) {
-		super();
-		this.location = location;
+	public Rectangle(CartPt location, int width, int height) {
+		super(location);
 		this.width = width;
-		this.hight = hight;
+		this.height = height;
 	}
 
-	@Override
-	public String toString() {
-		// TODO Auto-generated method stub
-		return "- Rectangle: (" + this.location.toString() + ") - width=" + this.width + " , hight= " + this.hight;
-	}
-
-	@Override
 	public boolean equals(Object obj) {
-		// TODO Auto-generated method stub
-		if (obj == null || !(obj instanceof Rectangle)) {
+		if (obj == null || !(obj instanceof Rectangle))
 			return false;
-		} else {
+		else {
 			Rectangle that = (Rectangle) obj;
-			return this.location.equals(that.location) && this.hight == that.hight && this.width == that.width;
+			return this.location.equals(that.location) && this.width == that.width && this.height == that.height;
 		}
 	}
 
-	@Override
-	public double distanseToO() {
-		// TODO Auto-generated method stub
-		return this.location.distanseToO();
+	public boolean contains(CartPt point) {
+		return this.location.getX() >= this.location.getX() && this.location.getX() <= this.location.getX() + this.width
+				&& this.location.getY() >= this.location.getY()
+				&& this.location.getY() <= this.location.getY() + this.height;
 	}
 
-	@Override
-	public boolean between(int a, int b) {
-		// TODO Auto-generated method stub
-		if (a > this.location.getX() && (a <= (this.location.getX() + this.width)) && (b >= this.location.getY())
-				&& (a <= this.location.getY() + this.hight)) {
-			return true;
-		}
-		return false;
+	public Rectangle boundingBox() {
+		return new Rectangle(this.location, this.width, this.height);
 	}
 
-	public int bigger() {
-		 if(this.hight > this.width) { 
-			 return this.hight ;
-			}else { 
-			return this.width;
-			}
+	public int getWidth() {
+		return this.width;
 	}
 
-	@Override
-	public Square boundingBox() {
-		// TODO Auto-generated method stub
-		return new Square(this.location, this.bigger() );
+	public int getHeight() {
+		return this.height;
 	}
-
-	@Override
-	public CartPT translate() {
-		// TODO Auto-generated method stub
-		return this.location;
-	}
-
 }

@@ -1,56 +1,37 @@
+
 package Ex7_4;
 
 public class Circle extends AShape {
-	private CartPT location;
-	private int radium;
-	/*
-	 * Testing for the Constructor
-	 * ISingleShape s2 = new Circle( new CartPT(2, 2),2);
+	private int radius;
+
+	/**
+	 * @param location
+	 * @param radius
 	 */
-	public Circle(CartPT location, int radium) {
-		super();
-		this.location = location;
-		this.radium = radium;
+	public Circle(CartPt location, int radius) {
+		super(location);
+		this.radius = radius;
 	}
-	@Override
-	public String toString() {
-		// TODO Auto-generated method stub
-		return "- Cirrle:  (" + this.location.toString()+ ") - radium= " + this.radium;
-	}
-	@Override
+
 	public boolean equals(Object obj) {
-		// TODO Auto-generated method stub
-		if(obj == null || !(obj instanceof Circle)) {
+		if (obj == null || !(obj instanceof Circle))
 			return false;
-		}else {
-			Circle that = (Circle)obj;
-			return this.location.equals(that.location) && this.radium == that.radium;
+		else {
+			Circle that = (Circle) obj;
+			return this.radius == that.radius && this.location.equals(that.location);
 		}
 	}
-	@Override
-	public double distanseToO() {
-		// TODO Auto-generated method stub
-		return this.location.distanseToO()-this.radium;
+
+	public String toString() {
+		return "Radius: " + this.radius;
 	}
-	@Override
-	public boolean between(int a, int b) {
-		// TODO Auto-generated method stub
-		if(a >= this.location.getX() - this.radium 
-				&& (a  <= this.location.getX()+this.radium )
-				&& (b >= this.location.getY()  - this.radium ) 
-				&& (a <= this.location.getY()+this.radium ) )  {
-			return true;
-		}
-		return false;
+
+	public boolean contains(CartPt point) {
+		return Math.sqrt((this.location.getX() - point.getX()) * (this.location.getX() - point.getX())
+				+ (this.location.getY() - point.getY()) * (this.location.getY() - point.getY())) <= this.radius;
 	}
-	@Override
-	public Square boundingBox() {
-		// TODO Auto-generated method stub
-		return new Square(this.translate(), this.radium) ;
-	}
-	@Override
-	public CartPT translate() {
-		// TODO Auto-generated method stub
-		return  new CartPT( this.location.getX()-this.radium,this.location.getY()-this.radium);
+
+	public Rectangle boundingBox() {
+		return new Rectangle(this.location.translate(-this.radius, -this.radius), 2 * this.radius, 2 * this.radius);
 	}
 }

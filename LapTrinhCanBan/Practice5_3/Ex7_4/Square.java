@@ -1,56 +1,33 @@
 package Ex7_4;
 
-public class Square extends AShape {
-	private CartPT location;
+public class Square extends AShape{
 	private int size;
-	/*
-	 * Testing for the constructor
-	 * ISingleShape s3 = new Square(new CartPT(2, 4), 2);
+
+	/**
+	 * @param location
+	 * @param size
 	 */
-	public Square(CartPT location, int size) {
-		super();
-		this.location = location;
+	public Square(CartPt location, int size) {
+		super(location);
 		this.size = size;
 	}
-	@Override
-	public String toString() {
-		// TODO Auto-generated method stub
-		return "- Square:  (" + this.location.toString()+ ") - size= " + this.size;
-	}
-	@Override
+
 	public boolean equals(Object obj) {
-		// TODO Auto-generated method stub
-		if(obj == null || !(obj instanceof Square)) {
+		if (obj == null || !(obj instanceof Square))
 			return false;
-		}else {
-			Square that = (Square)obj;
+		else {
+			Square that = (Square) obj;
 			return this.location.equals(that.location) && this.size == that.size;
 		}
 	}
-	@Override
-	public double distanseToO() {
-		// TODO Auto-generated method stub
-		return this.location.distanseToO();
+
+	public boolean contains(CartPt point) {
+		return this.location.getX() <= point.getX() && point.getX() <= this.location.getX() + this.size
+				&& this.location.getY() - this.size <= point.getY() && point.getY() <= this.location.getY();
+
 	}
-	@Override
-	public boolean between(int a, int b) {
-		// TODO Auto-generated method stub
-		if(a > this.location.getX() 
-				&& (a <= (this.location.getX()+this.size)) 
-				&& (b >= this.location.getY() )
-				&& (a <= this.location.getY()+this.size)) {
-			return true;
-		}
-		return false;
-	}
-	@Override
-	public Square boundingBox() {
-		// TODO Auto-generated method stub
-		return new Square(this.location, this.size);
-	}
-	@Override
-	public CartPT translate() {
-		// TODO Auto-generated method stub
-		return null;
+
+	public Rectangle boundingBox() {
+		return new Rectangle(this.location, this.size, this.size);
 	}
 }

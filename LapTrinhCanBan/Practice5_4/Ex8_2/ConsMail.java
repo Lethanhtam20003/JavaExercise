@@ -1,5 +1,6 @@
 package Ex8_2;
 
+
 public class ConsMail implements IMail {
 	private MessagesMail first;
 	private IMail rest;

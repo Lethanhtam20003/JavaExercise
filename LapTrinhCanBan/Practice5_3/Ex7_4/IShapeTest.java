@@ -3,46 +3,26 @@ package Ex7_4;
 import junit.framework.TestCase;
 
 public class IShapeTest extends TestCase {
-	public void testConstructor() {
-		AShape s1 = new Dot(new CartPT(2, 4));
-		AShape s2 = new Circle( new CartPT(2, 2),2);
-		AShape s3 = new Square(new CartPT(2, 4), 2);
-		AShape s4 = new Rectangle(new CartPT(2, 4), 4, 2);
-		
-		IShape i = new ConsShape( s1,new ConsShape(s2,new ConsShape(s3,new ConsShape(s4, new MTShape()))));
-		System.out.println(i);
+	IShape s1 = new Square(new CartPt(4, 3), 40);
+	IShape s2 = new Square(new CartPt(3, 4), 50);
+	IShape c1 = new Circle(new CartPt(0, 0), 20);
+	IShape c2 = new Circle(new CartPt(12, 5), 20);
+
+	IShape u1 = new CompositeShape(s1, s2);
+	IShape u2 = new CompositeShape(s1, c2);
+	IShape u3 = new CompositeShape(c1, u1);
+	IShape u4 = new CompositeShape(u3, u2);
+
+	public void testDistancetoO() {
+		assertEquals(u4.DistancetoO(), 0, 0.001);
 	}
-	public void testDistanseToO() {
-		AShape s1 = new Dot(new CartPT(2, 4));
-		AShape s2 = new Circle( new CartPT(2, 2),2);
-		AShape s3 = new Square(new CartPT(2, 4), 2);
-		AShape s4 = new Rectangle(new CartPT(2, 4), 4, 2);
-		
-		IShape i = new ConsShape( s1,new ConsShape(s2,new ConsShape(s3,new ConsShape(s4, new MTShape()))));
-		assertEquals(i.distanseToO(), 4.47,0.01);
+
+	public void testContains() {
+		assertTrue(u4.contains(new CartPt(6, 3)));
+		assertFalse(u4.contains(new CartPt(100, 100)));
 	}
-	public void testBoundaries() {
-		AShape s1 = new Dot(new CartPT(2, 4));
-		AShape s2 = new Circle( new CartPT(2, 2),2);
-		AShape s3 = new Square(new CartPT(2, 4), 2);
-		AShape s4 = new Rectangle(new CartPT(2, 4), 4, 2);
-		
-		IShape i = new ConsShape( s1,new ConsShape(s2,new ConsShape(s3,new ConsShape(s4, new MTShape()))));
-		assertEquals(i.boundaries(2, 4), true);
-		assertEquals(i.boundaries(10, 10), false);
-	}
-	public void testBoundingBox() {
-		AShape s1 = new Dot(new CartPT(2, 4));
-		AShape s2 = new Circle( new CartPT(2, 2),2);
-		AShape s3 = new Square(new CartPT(2, 4), 2);
-		AShape s4 = new Rectangle(new CartPT(2, 4), 4, 2);
-		IShape i = new ConsShape( s1,new ConsShape(s2,new ConsShape(s3,new ConsShape(s4, new MTShape()))));
-		
-		AShape s11= new Square(new CartPT(2,4), 0);
-		AShape s22 = new Square(new CartPT(0, 0), 2);
-		AShape s33 = new Square(new CartPT(2, 4), 2);
-		AShape s44 = new Square(new CartPT(2, 4),4);
-		IShape i00 = new ConsShape( s11,new ConsShape(s22,new ConsShape(s33,new ConsShape(s44,new ConsShape( new Square(new CartPT(0,0), 0),  new MTShape())))));
-		assertEquals(i.boundingBox(),i00);
+
+	public void testboundingBox() {
+		assertEquals(u4.boundingBox(), new Rectangle(new CartPt(-20, -20), 73, 74));
 	}
 }

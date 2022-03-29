@@ -57,6 +57,21 @@ public class ConsLog implements ILog {
 		// TODO Auto-generated method stub
 		return Math.max(this.first.getDistatse(), this.rest.maximumDistance());
 	}
+	@Override
+	public ILog softBySpeed() {
+		// TODO Auto-generated method stub
+		return this.rest.softBySpeed().insertILogorther(this.first);
+	}
+	@Override
+	public ILog insertILogorther(Entry that) {
+		// TODO Auto-generated method stub
+		if(that.hasSpeedThan(that)) {
+			return new ConsLog(that, this);
+		}else {
+			return new ConsLog(this.first, this.rest.insertILogorther(that));
+		}
+		
+	}
 
 	
 }
