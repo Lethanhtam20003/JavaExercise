@@ -1,6 +1,6 @@
 package BT9_13;
 
-
+ 
 public interface IBook {
 	public IBook thisAuthor(String authorName);
 	

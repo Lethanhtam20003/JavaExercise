@@ -1,4 +1,5 @@
-package BT5; 
+package BT5;
+
 
 public class Entry {
 	private Date date;

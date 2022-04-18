@@ -2,8 +2,7 @@
  * 
  */
 package BT9_12;
-
-
+ 
 /**
  * @author lethanhtam
  *
@@ -26,7 +25,7 @@ public class IceCream extends AItems{
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return "Ice Cream - '"+ this.getName()+"'  have: "+this.getWeight()+"g \n Price: "+this.getPrice()+"ð - flavor: "+ this.flavor 
+		return "Ice Cream - '"+ this.getName()+"'  have: "+this.getWeight()+"g \n Price: "+this.getPrice()+"ï¿½ - flavor: "+ this.flavor 
 				+",  type:  "+ this.type+";";
 	}
 	

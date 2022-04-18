@@ -1,6 +1,5 @@
 package BT8;
 
-
 public class Toy {
 	private String name;
 	private double price;

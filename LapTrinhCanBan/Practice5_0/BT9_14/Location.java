@@ -1,4 +1,6 @@
 package BT9_14;
+
+
 public class Location {
 	private int x;
 	private int y;

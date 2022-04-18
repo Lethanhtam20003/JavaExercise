@@ -1,6 +1,5 @@
 package BT8;
-
-
+ 
 public class ConsInventory implements Inventory {
 	private Toy first;
 	private Inventory rest;
@@ -94,7 +93,7 @@ public class ConsInventory implements Inventory {
 		return (this.sumPrice() / (this.howmany()));
 	}
 	/**
-	 * Develop the method replaceName, which consumes a list of toy and replaces all occurrences of “robot” with “r2d2” and
+	 * Develop the method replaceName, which consumes a list of toy and replaces all occurrences of ï¿½robotï¿½ with ï¿½r2d2ï¿½ and
 	 *  otherwise retains the toy descriptions in the same order.
 	 */
 	@Override

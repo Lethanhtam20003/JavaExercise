@@ -1,6 +1,5 @@
 package BT9_12;
-
-
+ 
 public class ConsItems implements IItems {
 	private AItems first;
 	private IItems rest;

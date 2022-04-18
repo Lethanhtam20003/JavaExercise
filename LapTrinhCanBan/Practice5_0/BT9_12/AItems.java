@@ -1,6 +1,5 @@
 package BT9_12;
-
-
+ 
 public abstract class AItems {
 	private String name;
 	private double weight;

@@ -1,6 +1,5 @@
 package BT9_11;
-
-
+ 
 public class ConsMail implements IMail {
 	private MessagesMail first;
 	private IMail rest;

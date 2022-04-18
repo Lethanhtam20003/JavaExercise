@@ -1,5 +1,6 @@
 package BT5;
 
+
 public class MTLog implements ILog {
 
 	@Override

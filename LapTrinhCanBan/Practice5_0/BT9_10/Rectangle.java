@@ -1,5 +1,5 @@
 package BT9_10;
-
+ 
 public class Rectangle extends AShape{
 	private double hight;
 	private double wight;

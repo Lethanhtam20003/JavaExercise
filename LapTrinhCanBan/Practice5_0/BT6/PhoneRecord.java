@@ -1,6 +1,5 @@
 package BT6;
 
-
 public class PhoneRecord {
 	private APhoneNumber phone;
 	private int minutes;

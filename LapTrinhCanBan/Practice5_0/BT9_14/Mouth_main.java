@@ -1,6 +1,6 @@
 package BT9_14;
 
-
+ 
 public class Mouth_main {
 	private Location location;
 	private ARiver river;
@@ -10,7 +10,7 @@ public class Mouth_main {
 		this.river = river;
 	}
 	/**
-	 * The EPA must represent river systems and monitor them… An EPA officer may wish to query a computer about the number of sources that feed a river system.
+	 * The EPA must represent river systems and monitor themï¿½ An EPA officer may wish to query a computer about the number of sources that feed a river system.
 	 * @return
 	 */
 	public int howManySource() {

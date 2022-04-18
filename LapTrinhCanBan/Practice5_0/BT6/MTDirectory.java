@@ -1,6 +1,5 @@
 package BT6;
 
-
 public class MTDirectory implements IDirectory {
 
 	@Override

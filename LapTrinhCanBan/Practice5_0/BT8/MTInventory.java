@@ -1,6 +1,5 @@
 package BT8;
-
-
+ 
 public class MTInventory implements Inventory {
 	@Override
 	public String toString() {

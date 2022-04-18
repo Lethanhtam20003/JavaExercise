@@ -2,8 +2,7 @@
  * 
  */
 package BT9_12;
-
-
+ 
 /**
  * @author lethanhtam
  *
@@ -26,7 +25,7 @@ public class Juice extends AItems{
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return "Juice - '"+ this.getName()+"'  have: "+this.getWeight()+"l \n Price: "+this.getPrice()+"ð - flavor: " +this.flavor
+		return "Juice - '"+ this.getName()+"'  have: "+this.getWeight()+"l \n Price: "+this.getPrice()+"ï¿½ - flavor: " +this.flavor
 				+",  packaged:  "+this.packaged+";";
 	}
 	

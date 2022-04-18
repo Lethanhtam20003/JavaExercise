@@ -7,7 +7,8 @@ public class BT1_2_angleMeasure {
 	 * @return
 	 */
 	public static double angleConversion(double angle) {
-		return angle* Math.PI/180;
+		//return angle* Math.PI/180;
+		return Math.toRadians(angle); 
 	}
 	/**
 	 * tính sin

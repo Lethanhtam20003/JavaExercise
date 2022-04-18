@@ -2,8 +2,7 @@
  * 
  */
 package BT9_12;
-
-
+ 
 /**
  * @author lethanhtam
  *
@@ -24,7 +23,7 @@ public class coffee extends AItems {
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return "Coffee - '"+ this.getName()+"'  have: "+this.getWeight()+"g \n Price: "+this.getPrice()+"ð - labeled: " +this.labeled+";";
+		return "Coffee - '"+ this.getName()+"'  have: "+this.getWeight()+"g \n Price: "+this.getPrice()+"ï¿½ - labeled: " +this.labeled+";";
 	}
 	
 	@Override

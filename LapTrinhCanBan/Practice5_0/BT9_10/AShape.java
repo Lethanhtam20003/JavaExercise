@@ -1,5 +1,6 @@
 package BT9_10;
 
+ 
 public abstract class AShape implements IShape {
 	protected CartPT location;
 	public AShape(CartPT location) {

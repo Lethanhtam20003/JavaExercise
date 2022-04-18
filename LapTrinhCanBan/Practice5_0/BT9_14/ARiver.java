@@ -1,6 +1,6 @@
 package BT9_14;
 
-
+ 
 public abstract class ARiver {
 	protected Location location;
 	protected double length;
@@ -12,7 +12,7 @@ public abstract class ARiver {
 	@Override
 	public abstract String toString();
 	/**
-	 * The EPA must represent river systems and monitor them… An EPA officer may wish to query a computer about the number of sources that feed a river system.
+	 * The EPA must represent river systems and monitor themï¿½ An EPA officer may wish to query a computer about the number of sources that feed a river system.
 	 * @return
 	 */
 	public abstract int howManySource();

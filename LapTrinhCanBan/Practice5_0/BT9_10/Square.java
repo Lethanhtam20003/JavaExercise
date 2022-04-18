@@ -1,4 +1,6 @@
 package BT9_10;
+ 
+ 
 
 public class Square extends AShape{
 	private double size;

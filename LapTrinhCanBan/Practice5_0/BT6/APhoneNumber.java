@@ -1,5 +1,6 @@
 package BT6;
 
+
 public class APhoneNumber {
 	private String name;
 	private int number;

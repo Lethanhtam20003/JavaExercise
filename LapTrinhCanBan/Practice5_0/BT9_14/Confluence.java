@@ -1,5 +1,5 @@
 package BT9_14;
-
+ 
 public class Confluence extends ARiver{
 	private ARiver left;
 	private ARiver right;

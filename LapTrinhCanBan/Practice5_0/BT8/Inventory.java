@@ -1,6 +1,5 @@
 package BT8;
-
-
+ 
 public interface Inventory {
 	public boolean contains(String nameOfInventory);
 	

@@ -1,6 +1,5 @@
 package BT9_11;
-
-
+ 
 public class MessagesMail {
 	private String from;
 	private String To;
