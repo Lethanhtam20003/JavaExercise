@@ -1,7 +1,7 @@
-package CacPhepToan__PhepGan;
+package bt1_9;
 import java.util.Scanner;
 
-public class Prime {
+public class BT2_Prime {
 	
 	
 
