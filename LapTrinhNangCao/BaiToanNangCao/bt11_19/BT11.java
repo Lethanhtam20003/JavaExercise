@@ -35,7 +35,7 @@ public class BT11 {
 			res+=" May ";
 			break;
 		case 6:
-			res+="June";
+			res+=" June ";
 			break;
 		case 7:
 			res+=" July " ;
@@ -61,9 +61,11 @@ public class BT11 {
 	}
 	public static void main(String[] args) {
 		Scanner ip = new Scanner(System.in);
-		System.out.println(" Nhap ngay thang:");
+		System.out.print(" Nhap ngay thang:");
 		int day = ip.nextInt();
+		System.out.print("\n Nhap ngay thang:");
 		int month = ip.nextInt();
+		System.out.print("\n Nhap ngay thang:");
 		int year = ip.nextInt();
 		System.out.println("ngay thang nhap vao: "+day+" / "+month+" / "+year);
 		System.out.println("sau khi dinh dang: "+dinhDangNgayThang(day, month, year));

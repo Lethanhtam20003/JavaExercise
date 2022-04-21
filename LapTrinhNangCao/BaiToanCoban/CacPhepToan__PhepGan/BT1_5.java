@@ -20,6 +20,7 @@ public class BT1_5 {
 		b[i] = ip.nextInt();
 		System.out.println(" khoảng cách: "+calculateDistance(a, b)+"\n");
 		}
+		
 	}
 
 	private static double calculateDistance(int[] a,int [] b) {

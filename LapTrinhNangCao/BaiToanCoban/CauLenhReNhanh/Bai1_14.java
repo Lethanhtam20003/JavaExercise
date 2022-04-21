@@ -18,7 +18,6 @@ public class Bai1_14 {
 			dem = number % 10;
 			number = number / 10;
 			arr[i] = dem;
-			System.out.println(arr[i]+""+i);
 			i--;
 		}
 		return arr;
@@ -32,7 +31,7 @@ public class Bai1_14 {
 		while (i < count) {
 			switch (arr[i]) {
 			case 1:
-				StrArr[i] = "mot ";
+				StrArr[i] = "một ";
 				break;
 			case 2:
 				StrArr[i] = "hai ";
@@ -41,56 +40,55 @@ public class Bai1_14 {
 				StrArr[i] = "ba ";
 				break;
 			case 4:
-				StrArr[i] = "bon ";
+				StrArr[i] = "bốn ";
 				break;
 			case 5:
-				StrArr[i] = "nam ";
+				StrArr[i] = "năm ";
 				break;
 			case 6:
-				StrArr[i] = "sau ";
+				StrArr[i] = "sáu ";
 				break;
 			case 7:
-				StrArr[i] = "bay ";
+				StrArr[i] = "bảy ";
 				break;
 			case 8:
-				StrArr[i] = "tam ";
+				StrArr[i] = "tám ";
 				break;
 			case 9:
-				StrArr[i] = "chin ";
+				StrArr[i] = "chín ";
 				break;
 			case 0:
-				StrArr[i] = " ";
+				StrArr[i] = "";
 				break;
 			}
 			i++;
 		}
-		i = 0;
-		while (i!=count) {
+		for (i=0; i!=count;i++) {
 			if (i == count - 3) {
-				if(StrArr[i] =="nam ") {
-					StrArr[i]="lam ";
-				}
-				System.out.println(i+"s");
-				res =StrArr[i] + " "+res;
+				res =res+StrArr[i] + "trăm ";
 			}
 			
 			if (i == count - 2) {
-				System.out.println(i+"n");
-				res = StrArr[i] + "muoi "+res;
+				if(StrArr[i]=="") {
+					res =res+  "lẽ ";
+				}else {
+					res =res+ StrArr[i] + "mươi ";
+				} 
 			}
 			
 			
 			if (i == count - 1) {
-				System.out.println(i+"d");
-				res = StrArr[i] + "tram "+res;
+				if(StrArr[i] =="năm ") {
+					StrArr[i]="lăm ";
+				}
+				res =res + StrArr[i] + " ";
 			}
-			i++;
 		}
 		return res;
 	}
 
 	public static void main(String[] args) {
-		int number = 345;
+		int number = 607;
 		System.out.println(SoThanhChu(number));
 	}
 }
