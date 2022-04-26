@@ -1,5 +1,6 @@
 package BT16;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Student implements StudentManagament{
@@ -7,13 +8,20 @@ public class Student implements StudentManagament{
 	private String studentName;
 	private int id;
 	private birthDay birth;
-	public Student(String studentName, int id, birthDay birth) {
+	private Scores scores;
+	public static ArrayList<Scores> listScores = new ArrayList<Scores>();
+	public Student(String studentName, int id, birthDay birth,ArrayList listScore) {
 		super();
 		this.studentName = studentName;
 		this.id = id;
 		this.birth = birth;
+		this.listScores = listScore;
 	}
-	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return "id:"+this.id+"\t"+this.studentName+"\t\t "+this.birth.toString()+"\n\n \t"+this.listScores;
+	}
 	public String getStudentName() {
 		return studentName;
 	}
@@ -29,6 +37,7 @@ public class Student implements StudentManagament{
 	public void setId(int id) {
 		this.id = id;
 	}
+	
 
 	@Override
 	public void AddStudent() {
@@ -50,9 +59,8 @@ public class Student implements StudentManagament{
 		int years = ip.nextInt();
 		
 		birthDay birth = new birthDay(day, month, years);
-		Student st1 =  new Student(studentName, id, birth);
-		lish.add(st1);
-		
+		Student st1 =  new Student(studentName, id, birth,null);
+		listStudent.add(st1);
 	}
 	@Override
 	public void AddScores(Student a) {

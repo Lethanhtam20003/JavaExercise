@@ -20,17 +20,11 @@ o	Thông tin xuất ra màn hình là thông tin của sinh viên như: tên sin
  *
  */
 public interface StudentManagament {
-	static ArrayList lish = new ArrayList();
+	public static ArrayList listStudent = new ArrayList();
 	public void AddStudent();
 	public void AddScores(Student a);
 	public double AverageScores(Student a);
 	public Student Find(String nameStudent);
 	public Student Find(int idStudent);
-	public static void main(String[] args) {
-		
-	for (var str : lish) {
-        System.out.println(str);
-    }
-	
-	}
+	public String toString();
 }

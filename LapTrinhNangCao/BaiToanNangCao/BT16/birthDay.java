@@ -10,5 +10,10 @@ public class birthDay {
 		this.month = month;
 		this.years = years;
 	}
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return day+"/"+month+"/"+years;
+	}
 	
 }
