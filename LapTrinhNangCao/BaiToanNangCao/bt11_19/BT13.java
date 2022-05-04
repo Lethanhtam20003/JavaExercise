@@ -9,7 +9,7 @@ package bt11_19;
  *
  */
 public class BT13 {
-	static public void printArr2(String[][] arr) {
+	static public void printArr2(char[][] arr) {
 		for (int row = 0; arr.length > row; row++) {
 			for (int column = 0; arr[row].length > column; column++) {
 				System.out.print(arr[row][column] + "\t");
@@ -18,44 +18,15 @@ public class BT13 {
 		}
 	}
 
-	static public int CountString(String a) {
-		int count = a.length();
-		return count;
-	}
-
-	static public int BoNho(int count) {
-		int dem = 0, bonho = 0;
-		while (dem < count) {
-			dem += 5;
-			bonho++;
-		}
-
-		return bonho;
-	}
-
 	static public String MaHoa(String a) {
 		String res = "";
-		int bonho = BoNho(CountString(a));
-		String[][] matMa = new String[bonho][5];
-		int bienChay = 0;
-		char b, c = a.charAt(bienChay);
-		for (int row = 0; matMa.length > row; row++) {
+		int bonho = (a.length() % 5 == 0) ? a.length() / 5 : a.length() / 5 + 1;
+		char[][] matMa = new char[bonho][5];
+		a = a.replace(' ', '-');
+		for (int row = 0, index = 0; matMa.length > row; row++) {
 			for (int column = 0; matMa[row].length > column; column++) {
-				String chuoi = String.valueOf(c);
-				b = a.charAt(bienChay);
-				if (b == ' ') {
-					matMa[row][column] = "-";
-				} else {
-					matMa[row][column] = chuoi;
-				}
-
-				if (CountString(a) - 1 > bienChay) {
-					bienChay++;
-					c = a.charAt(bienChay);
-				} else {
-					c = '-';
-				}
-
+				matMa[row][column] = (index < a.length()) ? a.charAt(index) : '-';
+				index++;
 			}
 		}
 		for (int column = 0; matMa[0].length > column; column++) {
@@ -63,35 +34,18 @@ public class BT13 {
 				res += matMa[row][column];
 			}
 		}
-		System.out.println();
-		printArr2(matMa);
-		System.out.println();
 		return res;
 	}
 
-	public static String GiaMa(String mahoa) {
+	static public String GiaMa(String a) {
 		String res = "";
-		int bonho = BoNho(CountString(mahoa));
-		String[][] matMa = new String[bonho][5];
-		int bienChay = 0;
-		char b, c = mahoa.charAt(bienChay);
-		for (int column = 0; matMa[0].length > column; column++) {
+		int bonho = (a.length() % 5 == 0) ? a.length() / 5 : a.length() / 5 + 1;
+		char[][] matMa = new char[bonho][5];
+		a = a.replace('-', ' ');
+		for (int column = 0, index = 0; matMa[0].length > column; column++) {
 			for (int row = 0; matMa.length > row; row++) {
-				String chuoi = String.valueOf(c);
-				b = mahoa.charAt(bienChay);
-				if (b == ' ') {
-					matMa[row][column] = "-";
-				} else {
-					matMa[row][column] = chuoi;
-				}
-
-				if (CountString(mahoa) - 1 > bienChay) {
-					bienChay++;
-					c = mahoa.charAt(bienChay);
-				} else {
-					c = '-';
-				}
-
+				matMa[row][column] = a.charAt(index);
+				index++;
 			}
 		}
 		for (int row = 0; matMa.length > row; row++) {
@@ -99,22 +53,17 @@ public class BT13 {
 				res += matMa[row][column];
 			}
 		}
-		System.out.println();
-		printArr2(matMa);
-		System.out.println();
 		return res;
-
 	}
 
 	public static void main(String[] args) {
 		String a = "I am student";
-		String b = "he is a good student ! really";
-//		String mahoa = MaHoa(b);
-//		String giama = GiaMa(mahoa);
+		System.out.println(a.length());
+		String b = "he is a good student !    oo really  ";
 		System.out.println();
-		System.out.println(MaHoa(b));
+		System.out.println(MaHoa(a));
 		System.out.println();
-		System.out.println(GiaMa(MaHoa(b)));
+		System.out.println(GiaMa(MaHoa(a)));
 
 	}
 }

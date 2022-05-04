@@ -15,6 +15,7 @@ public class BT8 {
 		String s = String.valueOf(number);
 		return s.length();
 	}
+
 	// cách làm 1
 	static public String xuatSoCoPhay(int number) {
 		String s = "";
@@ -47,6 +48,7 @@ public class BT8 {
 		return s.substring(0, s.length() - 1);
 
 	}
+
 	// cách làm 2
 	static public String a(int number) {
 		String res = "";
@@ -73,7 +75,8 @@ public class BT8 {
 
 		return res;
 	}
-	//subMethot thuộc cách 2
+
+	// subMethot thuộc cách 2
 	static public int count2(int number) {
 		int count;
 		for (count = 0; number > 0; count++) {
@@ -82,15 +85,39 @@ public class BT8 {
 		return count;
 	}
 
-	
+	// cách 3
+	static public String NumberFormat(int number) {
+		String res = "";
+		String numberStr = "";
+		numberStr = numberStr.valueOf(number);
+		int length = numberStr.length();
+		int index = 0;
+		if (length % 3 == 0) {
+			res += numberStr.charAt(index);
+			index++;
+			length--;
+		}
+		while (length > 0) {
+			if (length % 3 == 0) {
+				res += "," + numberStr.charAt(index);
+				index++;
+				length--;
+			}
+			res += numberStr.charAt(index);
+			index++;
+			length--;
+		}
+		return res;
+	}
 
 	public static void main(String[] args) {
-		Scanner ip = new Scanner(System.in);
-		System.out.print("nhap so: ");
-		int number = ip.nextInt();
-		System.out.println("count: " + count(number) + "kk: " + number);
-		System.out.println("dap an: " + a(number));
-		System.out.println(xuatSoCoPhay(1132422323));
+//		Scanner ip = new Scanner(System.in);
+//		System.out.print("nhap so: ");
+//		int number = ip.nextInt();
+//		System.out.println("count: " + count(number) + "kk: " + number);
+//		System.out.println("dap an: " + a(number));
+//		System.out.println(xuatSoCoPhay(1132422323));
+		System.out.println(NumberFormat(1000220773));
 	}
 
 }

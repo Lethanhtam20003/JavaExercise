@@ -1,7 +1,6 @@
 package bt11_19;
 
 import bt1_9.BT9;
-
 /**
  * Bài Tập 10.	(4) Cho 1 mảng số nguyên bất kỳ arr và 1 số nguyên bất ký qty (qty < kích thước mảng arr) 
  * viết phương thức trả về mạng số nguyên có qty phần tử 
@@ -89,7 +88,7 @@ public class BT_10 {
 	public static int[] subArrayC2(int[] arr, int qty) {
 		int[] resoft = new int[qty];
 		int limit = limit(arr.length);
-		int dem;
+		int cache;
 		/*
 		 * phần xáo trộn array
 		 */
@@ -98,9 +97,9 @@ public class BT_10 {
 			while(random >= arr.length ) {
 				random = (int)Math.ceil(Math.random()*limit);
 			}
-			dem=arr[i];
+			cache=arr[i];
 			arr[i]=arr[random];
-			arr[random]=dem;
+			arr[random]=cache;
 		}
 		
 		//hàm copy array 
