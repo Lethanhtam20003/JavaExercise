@@ -17,4 +17,8 @@ public class test extends TestCase {
 		System.out.println(belong);
 		assertEquals(belong, true);
 	}
+	public static void main(String[] args) {
+		String txt = "Think of a card \"hdjh\"Hãy nghĩ về 1 lá bài ";
+		System.out.println(txt);
+	}
 }

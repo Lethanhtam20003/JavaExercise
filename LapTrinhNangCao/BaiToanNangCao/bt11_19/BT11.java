@@ -61,7 +61,7 @@ public class BT11 {
 		res += " nam " + yearStr;
 		return res;
 	}
-	
+
 //	//sư dung slip
 //	public static String DinhDangNgayThang2(String date) {
 //		String res = "";
@@ -71,11 +71,11 @@ public class BT11 {
 //		return res;
 //	}
 
-	//sử dụng to Token
+	// sử dụng to Token
 	public static String DinhDangNgayThang3(String date) {
 		String res = "";
 		String dayStr, monStr, yearStr;
-		StringTokenizer ngay = new StringTokenizer(date,"/");
+		StringTokenizer ngay = new StringTokenizer(date, "/");
 		dayStr = ngay.nextToken();
 		monStr = ngay.nextToken();
 		yearStr = ngay.nextToken();
