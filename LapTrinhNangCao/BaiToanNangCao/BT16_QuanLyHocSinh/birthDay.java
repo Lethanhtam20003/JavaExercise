@@ -1,4 +1,4 @@
-package BT16;
+package BT16_QuanLyHocSinh;
 
 public class birthDay {
 	private int day;

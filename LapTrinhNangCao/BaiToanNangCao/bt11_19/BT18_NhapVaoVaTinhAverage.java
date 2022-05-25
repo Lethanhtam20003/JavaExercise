@@ -7,7 +7,7 @@ import java.util.Scanner;
  * @author lethanhtam
  *
  */
-public class BT18 {
+public class BT18_NhapVaoVaTinhAverage {
 	public static void main(String[] args) {
 		Scanner ip = new Scanner(System.in);
 		int number,sum=0,count=0;

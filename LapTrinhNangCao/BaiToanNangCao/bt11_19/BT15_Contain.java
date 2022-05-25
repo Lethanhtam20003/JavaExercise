@@ -9,7 +9,7 @@ import java.util.Arrays;
  * @author lethanhtam
  *
  */
-public class BT15 {
+public class BT15_Contain {
 	public static boolean CheckArr(int[] arrInput, int[] arrCopy) {
 		boolean resoft = true;
 		for (int i = 0; i < arrCopy.length; i++) {

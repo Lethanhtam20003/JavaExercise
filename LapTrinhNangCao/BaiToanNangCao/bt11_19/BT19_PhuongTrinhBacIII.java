@@ -9,7 +9,7 @@ package bt11_19;
  */
 
 
-public class BT19 {
+public class BT19_PhuongTrinhBacIII {
 	public static void SolveTheEquationOfDegreeI(int a, int b) {
 		double x = 0;
 		if (a == 0) {

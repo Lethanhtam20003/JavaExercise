@@ -8,7 +8,7 @@ package bt11_19;
  * @author lethanhtam
  *
  */
-public class BT13 {
+public class BT13_Encrypt {
 	static public void printArr2(char[][] arr) {
 		for (int row = 0; arr.length > row; row++) {
 			for (int column = 0; arr[row].length > column; column++) {

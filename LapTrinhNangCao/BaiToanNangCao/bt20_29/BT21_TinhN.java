@@ -7,7 +7,7 @@ package bt20_29;
  * @author lethanhtam
  *
  */
-public class BT21 {
+public class BT21_TinhN {
 	public static int a(int n) {
 		int res = 0;
 		for (int i = 0; i <= n; i++) {

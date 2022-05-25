@@ -10,7 +10,7 @@ package bt11_19;
  * @author lethanhtam
  *
  */
-public class BT17 {
+public class BT17_DemSoChiaHetCho5 {
 	public static int[] SoChiaHet() {
 		int[] arrResoft= new int[5];
 		for(int i =0;i<=100;i++) {

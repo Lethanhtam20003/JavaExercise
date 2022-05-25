@@ -1,16 +1,16 @@
-package BT16;
+package BT16_QuanLyHocSinh;
 
+import java.util.ArrayList;
 
 public class Scores {
 	private String subjectName;
 	private int subjectID;
 	private double scores;
-	
-	public Scores(String subjectName, int subjectID, double scores) {
+	public static  ArrayList<Scores> listScores = new ArrayList<Scores>();
+	public Scores(String subjectName, int subjectID) {
 		super();
 		this.subjectName = subjectName;
 		this.subjectID = subjectID;
-		this.scores = scores;
 	}
 	public double getScores() {
 		return scores;
@@ -22,6 +22,10 @@ public class Scores {
 	public String toString() {
 		// TODO Auto-generated method stub
 		return "id subject: "+this.subjectID+"\t "+this.subjectName+" \t\t "+this.scores+" đ";
+	}
+	public static void AddScore(Scores a) {
+		// TODO Auto-generated method stub
+		listScores.add(a);
 	}
 	
 }

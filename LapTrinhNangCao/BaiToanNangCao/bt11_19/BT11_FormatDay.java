@@ -9,7 +9,7 @@ import java.util.StringTokenizer;
  * @author lethanhtam
  *
  */
-public class BT11 {
+public class BT11_FormatDay {
 	// sư dung indexOf
 	static public String dinhDangNgayThang(String date) {
 		String res = "";

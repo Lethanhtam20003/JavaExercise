@@ -6,7 +6,7 @@ package bt20_29;
  * @author lethanhtam
  *
  */
-public class BT20 {
+public class BT20_TinhGiaiThua {
 	public static int TinhGiaiThua(int nNumber) {
 		int res = 1;
 		

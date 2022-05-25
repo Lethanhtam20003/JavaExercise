@@ -9,7 +9,7 @@ import bt1_9.BT9;
  * @author lethanhtam
  *
  */
-public class BT_10 {
+public class BT_10_TaoMangNhoHon {
 	BT9 bt = new BT9();
 	/**
 	 * SubMethod for subArrayC1

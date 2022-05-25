@@ -1,6 +1,5 @@
 package CauLenhReNhanh;
 
-import java.lang.runtime.SwitchBootstraps;
 
 //Cho năm dương lịch n. Xác định năm âm lịch tương ứng. Ví dụ: 1998 là năm Mậu Dần.
 public class Bai1_13 {
