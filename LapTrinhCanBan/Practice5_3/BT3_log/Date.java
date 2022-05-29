@@ -1,7 +1,7 @@
 /**
  * 
  */
-package BT3;
+package BT3_log;
  
 /**
  * @author lethanhtam

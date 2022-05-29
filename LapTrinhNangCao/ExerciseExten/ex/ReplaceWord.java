@@ -16,7 +16,7 @@ public class ReplaceWord {
 			res+=element+" ";
 		}
 		if(!isExist) {
-			throw new Exception("word is not exist!");
+			throw new Exception("word does not exist!");
 		}
 		return res.trim();
 	}

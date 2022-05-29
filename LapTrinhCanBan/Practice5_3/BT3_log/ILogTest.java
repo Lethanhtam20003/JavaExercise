@@ -1,10 +1,5 @@
-package BT1;
+package BT3_log;
 
-import BT3.ConsLog;
-import BT3.Date;
-import BT3.Entry;
-import BT3.ILog;
-import BT3.MTLog;
 import junit.framework.TestCase;
 
 public class ILogTest extends TestCase {

@@ -1,4 +1,4 @@
-package BT1;
+package BT1_Inventory;
 
  
 public class MTInventory implements Inventory {
@@ -43,7 +43,7 @@ public class MTInventory implements Inventory {
 	}
 	
 	@Override
-	public void raisePriceMutable(double rate) {
+	public void raisePrice_Mutable(double rate) {
 		// TODO Auto-generated method stub
 		
 	}

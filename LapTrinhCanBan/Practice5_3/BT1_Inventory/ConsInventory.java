@@ -1,4 +1,4 @@
-package BT1;
+package BT1_Inventory;
  
 public class ConsInventory implements Inventory {
 	private Toy first;
@@ -72,10 +72,10 @@ public class ConsInventory implements Inventory {
 	 * and immutable).
 	 */
 	@Override
-	public void raisePriceMutable(double rate) {
+	public void raisePrice_Mutable(double rate) {
 		// TODO Auto-generated method stub
 		this.first.setNewPrice(rate);
-		this.rest.raisePriceMutable(rate);
+		this.rest.raisePrice_Mutable(rate);
 	}
 	/**
 	 *

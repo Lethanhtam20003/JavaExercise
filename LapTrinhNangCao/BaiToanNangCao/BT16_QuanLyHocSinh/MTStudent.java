@@ -1,32 +1,32 @@
-package BT16;
+package BT16_QuanLyHocSinh;
 
-public class MTStudent implements StudentManagament{
+public class MTStudent {
 
-	@Override
+	
 	public void AddStudent() {
 		// TODO Auto-generated method stub
 		
 	}
 
-	@Override
+	
 	public void AddScores(Student a) {
 		// TODO Auto-generated method stub
 		
 	}
 
-	@Override
+	
 	public double AverageScores(Student a) {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 
-	@Override
+	
 	public Student Find(String nameStudent) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	@Override
+	
 	public Student Find(int idStudent) {
 		// TODO Auto-generated method stub
 		return null;

@@ -1,4 +1,4 @@
-package BT1;
+package BT1_Inventory;
 
 import junit.framework.TestCase;
 

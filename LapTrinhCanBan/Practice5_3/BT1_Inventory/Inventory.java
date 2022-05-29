@@ -1,4 +1,4 @@
-package BT1;
+package BT1_Inventory;
 
  
 public interface Inventory {
@@ -10,11 +10,12 @@ public interface Inventory {
 	
 	public Inventory raisePrice(double raice);
 	
-	public void raisePriceMutable(double rate);
+	public void raisePrice_Mutable(double rate);
+
+	public double sumPrice();//sub class of averagePrice
 	
 	public double averagePrice();
 	
-	public double sumPrice();
 	
 	public Inventory replaceName(String that);
 	

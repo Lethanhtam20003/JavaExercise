@@ -1,4 +1,4 @@
-package BT3;
+package BT3_log;
 
  
 public class Entry {
