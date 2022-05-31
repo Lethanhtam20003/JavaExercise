@@ -6,6 +6,8 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="src" path="JavaSwingBasic"/>
-	<classpathentry kind="src" path="Exercise"/>
+	<classpathentry kind="src" path="Exercise_culculatorMini"/>
+	<classpathentry kind="src" path="culculator"/>
+	<classpathentry kind="src" path="Exercise_findWord"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
