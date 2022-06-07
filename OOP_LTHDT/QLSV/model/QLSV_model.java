@@ -1,16 +1,16 @@
-package Student;
+package model;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class STM {
+public class QLSV_model {
 	public List<Student> listST;
-
-	public STM() {
-		super();
+	public QLSV_model() {
 		this.listST = new ArrayList<Student>();
 	}
-
+	
+	
+	
 	public void addSt(String id, String name) {
 
 		if (cheakID(id))
@@ -27,7 +27,7 @@ public class STM {
 		return false;
 	}
 
-	private Student findByID(String id) {
+	public Student findByID(String id) {
 		// TODO Auto-generated method stub
 		for (Student st : listST)
 			if (st.cheakID(id))
@@ -44,4 +44,18 @@ public class STM {
 		for (Student st : listST)
 			System.out.println(st);
 	}
+
+	public String showit() {
+		String result = "id \t\t name \n";
+		for (Student st : listST)
+			result+=st.getId()+"\t"+st.getName()+"\n";
+		return result;
+	}
+
+
+
+	public void softByScore() {
+		
+	}
+	
 }

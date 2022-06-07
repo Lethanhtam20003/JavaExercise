@@ -1,4 +1,4 @@
-package Student;
+package model;
 
 import java.util.List;
 

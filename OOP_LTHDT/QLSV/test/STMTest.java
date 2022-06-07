@@ -1,8 +1,10 @@
-package Student;
+package test;
+
+import model.QLSV_model;
 
 public class STMTest {
 	public static void main(String[] args) {
-		STM main = new STM();
+		QLSV_model main = new QLSV_model();
 		System.out.println("sjhsj");
 		main.addSt("110", "hhh");
 		main.addSt("111", "hello word");

@@ -1,4 +1,4 @@
-package Student;
+package model;
 
 public class Subject {
 	private String idSub;
