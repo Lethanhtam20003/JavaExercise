@@ -2,13 +2,17 @@ package controler_menu;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.awt.event.MouseMotionListener;
+
+import javax.swing.AbstractButton;
 
 import view_menu.view_menu;
 
-public class controler_menu implements ActionListener{
+public class controler_menu implements ActionListener, MouseListener {
 	private view_menu view;
-	
-	
+
 	/**
 	 * @param view
 	 */
@@ -16,37 +20,70 @@ public class controler_menu implements ActionListener{
 		this.view = view;
 	}
 
-
-	
-
-
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
 		String src = e.getActionCommand();
-		
-		if(src.equals("exit")) {
+
+		switch (src) {
+		case "exit":
 			System.exit(0);
-		}else {
-			this.view.setTextJlabel("ban da nhan "+src);
-			
+			break;
+		case "show tab":
+			AbstractButton checkbox = (AbstractButton) e.getSource();
+			boolean check = checkbox.getModel().isSelected();
+			if (check) {
+				this.view.enableToolbar();
+			} else {
+				this.view.disenableToolbar();
+			}
+			this.view.refreshthis();
+			break;
+		default:
+			this.view.setTextJlabel("" + src);
+			break;
 		}
+
 //		if(src.equals("new")) {
-//			this.view.setTextJlabel("ban da nhan "+src);
 //		}else if(src.equals("open")) {
-//			this.view.setTextJlabel("ban da nhan "+src);
 //		}else if(src.equals("exit")) {
-//			this.view.setTextJlabel("ban da nhan "+src);
 //		}else if(src.equals("21")) {
-//			this.view.setTextJlabel("ban da nhan "+src);
 //		}else if(src.equals("22")) {
-//			this.view.setTextJlabel("ban da nhan "+src);
 //		}else if(src.equals("31")) {
-//			this.view.setTextJlabel("ban da nhan "+src);
 //		}else if(src.equals("32")) {
-//			this.view.setTextJlabel("ban da nhan "+src);
 //		}
 //		
+	}
+
+	@Override
+	public void mouseClicked(MouseEvent e) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void mousePressed(MouseEvent e) {
+		if (e.isPopupTrigger()) {
+			this.view.jpopupMenu.show(e.getComponent(), e.getX(), e.getY());
+		}
+	}
+
+	@Override
+	public void mouseReleased(MouseEvent e) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void mouseEntered(MouseEvent e) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void mouseExited(MouseEvent e) {
+		// TODO Auto-generated method stub
+
 	}
 
 }

@@ -19,7 +19,7 @@ public class BT20_TinhGiaiThua {
 	}
 
 	public static void main(String[] args) {
-		int nNumber = 0;
+		int nNumber = -6;
 		int t = TinhGiaiThua(nNumber);
 		System.out.println(t);
 	}
