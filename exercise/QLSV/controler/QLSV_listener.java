@@ -3,6 +3,8 @@ package controler;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import model.QLSV_model;
+import model.Student;
 import view.QLSV_view;
 
 public class QLSV_listener implements ActionListener {
@@ -21,7 +23,7 @@ public class QLSV_listener implements ActionListener {
 		String src = e.getActionCommand();
 		if (src.equals("add")) {
 			this.view.addST(view.getTextfield_ID().getText(), view.getTextfield_name().getText(),
-					view.getTextfield_score().getText());
+					view.getTextfield_class().getText());
 
 			this.view.showlist();
 		} else if (src.equals("delete")) {
@@ -33,7 +35,13 @@ public class QLSV_listener implements ActionListener {
 			this.view.softByScore();
 			this.view.showlist();
 		}
+		
 
+	}
+	public static void main(String[] args) {
+		QLSV_model model = new QLSV_model();
+		QLSV_view view = new QLSV_view(model);
+		view.addST("21130555", "nguyen van a","DTD21");
 	}
 
 }

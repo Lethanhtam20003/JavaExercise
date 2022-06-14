@@ -26,14 +26,14 @@ public class QLSV_view extends JFrame {
 	QLSV_listener ac = new QLSV_listener(this);
 	private JTextField textfield_name;
 	private JTextField textfield_ID;
-	private JTextField textfield_score;
+	private JTextField textfield_class;
 	private JTextArea textArea;
 
 	/**
 	 * @param view
 	 * @throws HeadlessException
 	 */
-	public QLSV_view() throws HeadlessException {
+	public QLSV_view(QLSV_model model) throws HeadlessException {
 		this.model = new QLSV_model();
 		try {
 			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
@@ -77,8 +77,8 @@ public class QLSV_view extends JFrame {
 		textfield_ID = new JTextField();
 		textfield_ID.setFont(font);
 
-		textfield_score = new JTextField();
-		textfield_score.setFont(font);
+		textfield_class = new JTextField();
+		textfield_class.setFont(font);
 
 		// label
 		JLabel label_name = new JLabel("name:", JLabel.RIGHT);
@@ -87,8 +87,8 @@ public class QLSV_view extends JFrame {
 		JLabel label_id = new JLabel("id:", JLabel.RIGHT);
 		label_id.setFont(font);
 
-		JLabel label_birth = new JLabel("score:", JLabel.RIGHT);
-		label_birth.setFont(font);
+		JLabel label_class = new JLabel("class:", JLabel.RIGHT);
+		label_class.setFont(font);
 
 		// button
 		JButton button_add = new JButton("add");
@@ -116,8 +116,8 @@ public class QLSV_view extends JFrame {
 		panel_informationStudent.add(textfield_ID);
 		panel_informationStudent.add(label_name);
 		panel_informationStudent.add(textfield_name);
-		panel_informationStudent.add(label_birth);
-		panel_informationStudent.add(textfield_score);
+		panel_informationStudent.add(label_class);
+		panel_informationStudent.add(textfield_class);
 
 		JPanel panel_Button = new JPanel(new FlowLayout(FlowLayout.RIGHT));
 		panel_Button.setBorder(new TitledBorder("manipulation"));
@@ -140,7 +140,7 @@ public class QLSV_view extends JFrame {
 		JScrollPane scrollpane = new JScrollPane();
 		// text area
 		textArea = new JTextArea(10, 10);
-		textArea.setText("id          name    ");
+		textArea.setText("id \t\t name \t\t class");
 		scrollpane.setViewportView(textArea);
 		panelResult.add(scrollpane);
 		return panelResult;
@@ -162,12 +162,12 @@ public class QLSV_view extends JFrame {
 		this.textfield_ID = textfield_ID;
 	}
 
-	public JTextField getTextfield_score() {
-		return textfield_score;
+	public JTextField getTextfield_class() {
+		return textfield_class;
 	}
 
 	public void setTextfield_score(JTextField textfield_birth) {
-		this.textfield_score = textfield_birth;
+		this.textfield_class = textfield_birth;
 	}
 
 	public JTextArea getTextArea() {
@@ -180,7 +180,7 @@ public class QLSV_view extends JFrame {
 
 	public void addST(String string, String string2, String string3) {
 		// TODO Auto-generated method stub
-		this.model.addSt(string, string2);
+		this.model.addSt(string, string2,string3);
 	}
 	
 	public void showlist() {
@@ -202,7 +202,7 @@ public class QLSV_view extends JFrame {
 	public void findById(String text) {
 		// TODO Auto-generated method stub
 		Student st = this.model.findByID(text);
-		this.textArea.setText("id \t\t name \n"+st.getId()+"\t" +st.getName());
+		this.textArea.setText("id \t\t name "+st.getId()+"\t" +st.getName());
 	}
 	
 

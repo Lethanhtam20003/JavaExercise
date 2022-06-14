@@ -11,11 +11,11 @@ public class QLSV_model {
 	
 	
 	
-	public void addSt(String id, String name) {
+	public void addSt(String id, String name,String ofClass) {
 
 		if (cheakID(id))
 			return;
-		listST.add(new Student(id, name));
+		listST.add(new Student(id, name,ofClass));
 
 	}
 
@@ -46,13 +46,13 @@ public class QLSV_model {
 	}
 
 	public String showit() {
-		String result = "id \t\t name \n";
+		String result = "id \t\t name \t\t class \n";
 		for (Student st : listST)
-			result+=st.getId()+"\t"+st.getName()+"\n";
+			result+=st.getId()+"\t"+st.getName()+"\t"+st.getOfClass()+"\n";
 		return result;
 	}
 
-
+ 
 
 	public void softByScore() {
 		

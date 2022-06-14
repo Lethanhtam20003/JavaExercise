@@ -4,13 +4,11 @@ public class Subject {
 	private String idSub;
 	private String nameSub;
 	private byte credit;
-	private double score;
-	public Subject(String idSub, String nameSub, byte credit, double score) {
-		super();
+	private Score score;
+	public Subject(String idSub, String nameSub, byte credit) {
 		this.idSub = idSub;
 		this.nameSub = nameSub;
 		this.credit = credit;
-		this.score = score;
 	}
 	@Override
 	public String toString() {
