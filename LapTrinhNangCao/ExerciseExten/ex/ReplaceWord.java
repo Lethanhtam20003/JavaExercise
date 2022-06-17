@@ -2,7 +2,10 @@ package ex;
 import java.util.StringTokenizer;
 
 public class ReplaceWord {
-	static public String ReplaceWord(String word, String Replace, String sentences) throws Throwable {
+	public ReplaceWord() {
+		// TODO Auto-generated constructor stub
+	}
+	static public String replaceWord(String word, String Replace, String sentences) throws Throwable {
 		String res="";
 		StringTokenizer tk = new StringTokenizer(sentences);
 		String element;
@@ -26,7 +29,7 @@ public class ReplaceWord {
 		String word ="i";
 		System.out.println("you will pass exam");
 		try {
-			System.out.println(ReplaceWord(word, replace, sentences));
+			System.out.println(replaceWord(word, replace, sentences));
 		} catch (Throwable e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -36,7 +39,7 @@ public class ReplaceWord {
 		replace = "you";
 		word = "you";
 		try {
-			System.out.println(ReplaceWord(word, replace, sentences));
+			System.out.println(replaceWord(word, replace, sentences));
 		System.out.println();
 		}catch(Throwable e){
 			e.printStackTrace();

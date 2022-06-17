@@ -3,7 +3,18 @@ package ThiGiuaKyPhanSwing;
 import java.util.Random;
 
 public class model {
-	static public int[] numberSequence(int lenght) {
+	
+	private int[] day;
+	public int[] getDay() {
+		return day;
+	}
+
+	public void setDay(int[] day) {
+		this.day = day;
+	}
+
+	public int[] numberSequence(int lenght) {
+		
 		int[] res = new int[lenght];
 		Random rd = new Random();
 		for (int i = 0; i < res.length; i++) {
@@ -12,9 +23,9 @@ public class model {
 		return res;
 	}
 
-	static public boolean increasingNumberSequence(int[] a) {
+	 public boolean increasingNumberSequence(int[] a) {
 		for (int i = 0; i < a.length-1; i++) {
-			if(a[i] >a[i=1]) {
+			if(a[i] <a[i=1]) {
 				return false;
 			}
 		}
@@ -22,9 +33,17 @@ public class model {
 
 	}
 
+	public String displayNumberSequence(int[] numberSequenceN) {
+		 String res="";
+		for (int c : numberSequenceN)
+			res += c + ", ";
+		return res;
+	}
+	
 	public static void main(String[] args) {
-		int[] a = numberSequence(5);
+		model m = new model();
+		int[] a = m.numberSequence(5);
 		for (int c : a)
-			System.out.print(c + "\t");
+			System.out.print(c + ", ");
 	}
 }

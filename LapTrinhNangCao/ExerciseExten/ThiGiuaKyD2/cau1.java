@@ -1,4 +1,4 @@
-package ThiGiuaKy;
+package ThiGiuaKyD2;
 
 /**
  * cho số tự nhiên. c1 - điếm số đếm số chữ số nguyên đó. c-2 tìm số nghịch đảo.
