@@ -3,16 +3,15 @@ package ThiGiuaKyPhanSwing;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import javax.swing.JOptionPane;
 import javax.swing.UIManager;
 
-public class controler_Ac implements ActionListener {
-	static view view;
+public class controler_day implements ActionListener {
+	 view view;
 
 	/**
 	 * @param view
 	 */
-	public controler_Ac(ThiGiuaKyPhanSwing.view view) {
+	public controler_day(ThiGiuaKyPhanSwing.view view) {
 		this.view = view;
 	}
 
@@ -24,6 +23,7 @@ public class controler_Ac implements ActionListener {
 		switch (src) {
 		case "tao dãy":
 			this.view.createNumberSequence();
+			break;
 		case "kiểm tra dãy":
 			this.view.showResult();
 			break;
@@ -32,13 +32,10 @@ public class controler_Ac implements ActionListener {
 
 	public static void main(String[] args) {
 		try {
-			UIManager.setLookAndFeel(UIManager.getCrossPlatformLookAndFeelClassName());
 			new view();
+			UIManager.setLookAndFeel(UIManager.getCrossPlatformLookAndFeelClassName());
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
 }
-//JOptionPane.showInputDialog(" Bạn chua nhập N vào"
-//		, JOptionPane.PLAIN_MESSAGE);
-//break;

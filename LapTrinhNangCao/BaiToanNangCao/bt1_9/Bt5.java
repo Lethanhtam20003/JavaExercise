@@ -9,29 +9,32 @@ public class Bt5 {
 	 */
 	public static void printMaxtrix(int[][] diagonalValues) {
 		for (int i = 0; diagonalValues.length > i; i++) {
-			for (int j = 0; j <= i; j++) {
+			for (int j = 0; j < diagonalValues[i].length; j++) {
 				System.out.print(diagonalValues[i][j] + ", \t");
 			}
 			System.out.println();
 		}
 	}
+
 	/**
-	 * b.	viết hàm int[][] createPascalTriangle(int size) tạo ra ma trận số nguyên 2 chiều 
-	 * thể hiện tam giác pascal
-	 * 1
-	 * 1 2 3 
-	 * 1 2 3 4
+	 * b. viết hàm int[][] createPascalTriangle(int size) tạo ra ma trận số nguyên 2
+	 * chiều thể hiện tam giác pascal 1 1 2 3 1 2 3 4
+	 * 
 	 * @param diagonalValues
 	 */
-	public static int[][] printMaxtrix2() {
-		int[][] d = new int[4][4];
-		for (int i = 0; d.length > i; i++) {
-			for (int j = 0; j<=i; j++) {
-					d[i][j] = j+1;
+
+	public static int[][] createPascaltriangle(int n) {
+		int[][] arr = new int[n][];
+		for (int col = 0; arr.length > col; col++) {
+			int[] arrRow = new int[col + 1];
+			for (int row = 0; row <= col; row++) {
+				arrRow[row] = row + 1;
 			}
+			arr[col] = arrRow;
 		}
-		return d;
+		return arr;
 	}
+
 	/**
 	 * c. viết hàm int[][] createPascalTriangle(int[] diagonalValues) nhận vào mảng
 	 * số nguyên bất kỳ chứa các giá trị năm trên đường chéo để tạo ra ma trận số
@@ -45,24 +48,26 @@ public class Bt5 {
 	 * @return
 	 */
 	public static int[][] createPascaltriangle(int[] diagonnalues) {
-		int[][] arr = new int[diagonnalues.length][diagonnalues.length];
-		for (int i = 0; diagonnalues.length > i; i++) {
-			int dem = i;
-			for (int j = 0; j <= i; j++) {
-				if (dem == 0) {
-					arr[i][j] = diagonnalues[i];
+		int[][] arr = new int[diagonnalues.length][];
+		for (int col = 0; arr.length > col; col++) {
+			int[] arrRow = new int[col + 1];
+			for (int row = 0; row <= col; row++) {
+				if (col == row) {
+					arrRow[row] = diagonnalues[col];
 				} else {
-					arr[i][j] = diagonnalues[i] - i + j;
-					dem--;
+					arrRow[row] = diagonnalues[col] - col + row;
 				}
+
 			}
+			arr[col] = arrRow;
 		}
+
 		return arr;
 	}
 
 	public static void main(String[] args) {
 		System.out.println("cau b");
-		printMaxtrix(printMaxtrix2());
+		printMaxtrix(createPascaltriangle(5));
 		System.out.println("cau c");
 		int[] b = { 1, 5, 2, 0 };
 		printMaxtrix(createPascaltriangle(b));

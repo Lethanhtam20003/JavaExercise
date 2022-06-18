@@ -25,7 +25,7 @@ public class model {
 
 	 public boolean increasingNumberSequence(int[] a) {
 		for (int i = 0; i < a.length-1; i++) {
-			if(a[i] <a[i=1]) {
+			if(a[i] <a[i+1]) {
 				return false;
 			}
 		}
@@ -42,8 +42,10 @@ public class model {
 	
 	public static void main(String[] args) {
 		model m = new model();
-		int[] a = m.numberSequence(5);
+		int[] a = m.numberSequence(56);
 		for (int c : a)
 			System.out.print(c + ", ");
+		System.out.println( m.increasingNumberSequence(a));
+		
 	}
 }
