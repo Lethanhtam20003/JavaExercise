@@ -12,6 +12,6 @@
 	<classpathentry kind="src" path="mouse"/>
 	<classpathentry kind="src" path="drawAndShowShape"/>
 	<classpathentry kind="src" path="menuAnd HandleAboutMEnu"/>
-	<classpathentry kind="src" path="MenuForRestaurant"/>
+	<classpathentry kind="src" path="MenuForRestaurantI"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
