@@ -5,7 +5,7 @@ import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 
 import view.view_mouse;
-
+//sds
 public class controler_mouse implements MouseListener,MouseMotionListener {
 	view_mouse view ;
 	

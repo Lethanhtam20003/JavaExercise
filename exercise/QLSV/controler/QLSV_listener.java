@@ -21,6 +21,7 @@ public class QLSV_listener implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
 		String src = e.getActionCommand();
+		this.view.updatePane();
 		if (src.equals("add")) {
 			this.view.addST(view.getTextfield_ID().getText(), view.getTextfield_name().getText(),
 					view.getTextfield_class().getText());
@@ -41,7 +42,7 @@ public class QLSV_listener implements ActionListener {
 	public static void main(String[] args) {
 		QLSV_model model = new QLSV_model();
 		QLSV_view view = new QLSV_view(model);
-		view.addST("21130555", "nguyen van a","DTD21");
+		view.addST("21130558", "nguyen van d","DTD21");
 	}
 
 }

@@ -1,6 +1,7 @@
 package view;
 
 import java.awt.BorderLayout;
+import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.Font;
 import java.awt.GridLayout;
@@ -38,7 +39,7 @@ public class QLSV_view extends JFrame {
 		try {
 			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
 
-			this.init();//init componant
+			this.init();// init componant
 			this.setLocationRelativeTo(null);
 			this.setVisible(true);
 			this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -51,10 +52,10 @@ public class QLSV_view extends JFrame {
 	private void init() {
 		this.setTitle("Quản lý sinh viên");
 		this.setSize(500, 500);
-		
-		JPanel containPain = new JPanel();//contain main 
+
+		JPanel containPain = new JPanel();// contain main
 		containPain.setLayout(new BorderLayout());
-		
+
 		JPanel panelMain_south = new JPanel();
 		panelMain_south.add(createStudentPanel());
 
@@ -140,7 +141,7 @@ public class QLSV_view extends JFrame {
 		JScrollPane scrollpane = new JScrollPane();
 		// text area
 		textArea = new JTextArea(10, 10);
-		textArea.setText("id \t\t name \t\t class");
+		textArea.setText(this.model.showit());
 		scrollpane.setViewportView(textArea);
 		panelResult.add(scrollpane);
 		return panelResult;
@@ -178,11 +179,12 @@ public class QLSV_view extends JFrame {
 		this.textArea = textArea;
 	}
 
+	// method main
 	public void addST(String string, String string2, String string3) {
 		// TODO Auto-generated method stub
-		this.model.addSt(string, string2,string3);
+		this.model.addST(string, string2, string3);
 	}
-	
+
 	public void showlist() {
 		String showit = this.model.showit();
 		textArea.setText(showit);
@@ -193,8 +195,6 @@ public class QLSV_view extends JFrame {
 		this.model.deleteSt(text);
 	}
 
-	
-
 	public void softByScore() {
 		this.model.softByScore();
 	}
@@ -202,8 +202,14 @@ public class QLSV_view extends JFrame {
 	public void findById(String text) {
 		// TODO Auto-generated method stub
 		Student st = this.model.findByID(text);
-		this.textArea.setText("id \t\t name "+st.getId()+"\t" +st.getName());
+		this.textArea.setText("id \t\t name " + st.getId() + "\t" + st.getName());
 	}
-	
+
+	public void updatePane() {
+		// TODO Auto-generated method stub
+		Dimension d =  this.getSize();
+		this.pack();
+		this.setSize(d);
+	}
 
 }

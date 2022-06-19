@@ -1,4 +1,4 @@
-package controler;
+ package controler;
 
 import javax.swing.UIManager;
 

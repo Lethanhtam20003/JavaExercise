@@ -14,7 +14,7 @@ public class cau2 {
 				boolean check = charArr[i] < '0' || charArr[i] > '9';
 				if (i == 0 && check) {
 					String r = String.valueOf(charArr[i]).toUpperCase();
-					i++;
+					i++; 
 					result += r;
 				}
 				result += charArr[i];
