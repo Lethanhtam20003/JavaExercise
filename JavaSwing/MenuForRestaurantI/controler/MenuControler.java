@@ -26,24 +26,47 @@ public class MenuControler implements ActionListener {
 		// TODO Auto-generated method stub
 
 		String src = e.getActionCommand();
-		if (src.equals("thanh toán")) {
-			String monchinh = "";
-			Enumeration<AbstractButton> button_monchinh = this.view.getGroup_monchinh().getElements();
-			while (button_monchinh.hasMoreElements()) {
-				AbstractButton a = button_monchinh.nextElement();
-				if (a.isSelected()) {
-					monchinh += a.getText();
+		if (src.equals("Exit"))
+			System.exit(0);
+		if (src.equals("Change init")) {
+			this.view.changeContentpane();
+			this.view.updateshow();
+		}
+		if (this.view.isCheckContentpane()) {
+			this.view.resetResult();
+			if (src.equals("thanh toán")) {
+				String monchinh = "";
+				Enumeration<AbstractButton> button_monchinh = this.view.getGroup_monchinh().getElements();
+				while (button_monchinh.hasMoreElements()) {
+					AbstractButton a = button_monchinh.nextElement();
+					if (a.isSelected()) {
+						monchinh += a.getText();
+					}
 				}
-			}
-			String monphu = "";
-			//Enumeration<AbstractButton> button_monphu= this.view.getButton_monphu().();
-			for(JCheckBox c : this.view.getButton_monphu() ) {
-				if (c.isSelected()) {
-					monphu += c.getText()+", ";
+				String monphu = "";
+				// Enumeration<AbstractButton> button_monphu= this.view.getButton_monphu().();
+				for (JCheckBox c : this.view.getButton_monphu()) {
+					if (c.isSelected()) {
+						monphu += c.getText() + ", ";
+					}
 				}
+				this.view.getModel().setSelectedDishes(monchinh + ", " + monphu);
+				this.view.updatethenthanhtoan();
 			}
-			this.view.getModel().setSelectedDishes(monchinh+", "+ monphu);
-			this.view.updatethenthanhtoan();
+		} else {
+			this.view.resetResult();
+			if (src.equals("thanh toán")) {
+				String monchinh = this.view.getCbb().getSelectedItem().toString();
+				String monphu="";
+				Object[] cacmonphu = this.view.getL().getSelectedValues();
+				// Enumeration<AbstractButton> button_monphu= this.view.getButton_monphu().();
+				for (Object c :cacmonphu) {
+						monphu = monphu + c.toString() + ", ";
+					
+				}
+				this.view.getModel().setSelectedDishes(monchinh + ", " + monphu);
+				this.view.updatethenthanhtoan();
+			}
 		}
 	}
 
