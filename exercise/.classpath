@@ -7,5 +7,7 @@
 	</classpathentry>
 	<classpathentry kind="src" path="QLSV"/>
 	<classpathentry kind="src" path="Drawing"/>
+	<classpathentry kind="src" path="paint_APP"/>
+	<classpathentry kind="src" path="Paint_app(new)"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

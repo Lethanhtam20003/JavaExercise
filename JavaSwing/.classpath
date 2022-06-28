@@ -15,5 +15,6 @@
 	<classpathentry kind="src" path="menuAnd HandleAboutMEnu"/>
 	<classpathentry kind="src" path="drawAndShowShape"/>
 	<classpathentry kind="src" path="MyNotepad"/>
+	<classpathentry kind="src" path="appp"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
