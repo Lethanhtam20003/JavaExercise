@@ -43,7 +43,8 @@ public class testAlbum extends TestCase {
 		ConsMusicItem c2 = new ConsMusicItem(n1,
 				new ConsMusicItem(n2, new ConsMusicItem(n3, new ConsMusicItem(n4, new ConsMusicItem(n5, empty)))));
 
-		Album a2 = new Album("Top Bài hát Việt Nam", 0, c2, null);
+		Album a2 = new Album("Top Bài hát Việt Nam",0, c2,null);
+		System.out.println(a1+"\n\n\n"+a2);
 	}
 
 	MusicItem m1 = new MusicItem(new Song("khát vộng", "Phạm Minh Tuấn", "cách mạng"),
@@ -85,7 +86,13 @@ public class testAlbum extends TestCase {
 	public void testTotalTime() {
 		//assertEquals(a1.totalTime(), new ClockTime(17, 53));
 		assertEquals(a1.totalTime(), 1073);
-
+	}
+	public void testThisAuthor() {
+		System.out.println(a1.thisAuthor("Hoàng Điệp"));
+	}
+	public void testSoftByTime() {
+		System.out.println("s");
+		System.out.println(a1.softByTime());
 	}
 	
 }

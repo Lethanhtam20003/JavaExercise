@@ -6,4 +6,12 @@ public interface IMusicItem {
 
 	int totalTiem();
 
+	IMusicItem thisAuthor(String author);
+
+
+	IMusicItem softByTime();
+
+	IMusicItem insertMusicItemOrther(MusicItem first);
+
+
 }

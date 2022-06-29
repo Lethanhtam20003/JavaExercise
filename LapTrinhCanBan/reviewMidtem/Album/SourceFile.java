@@ -5,6 +5,7 @@ public class SourceFile {
 	private int size;
 	private clockTime duration;
 	private int hitCounts;
+
 	public SourceFile(String fileName, int size, clockTime duration, int hitCounts) {
 		super();
 		this.fileName = fileName;
@@ -12,29 +13,47 @@ public class SourceFile {
 		this.duration = duration;
 		this.hitCounts = hitCounts;
 	}
+
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return this.fileName + "," + this.size + " byte," + this.duration.toString() + "," + this.hitCounts + ",";
+	}
+
 	public boolean moreFavoriteThan(MusicItem that) {
 		// TODO Auto-generated method stub
-		return this.hitCounts>that.getFile().hitCounts;
+		return this.hitCounts > that.getFile().hitCounts;
 	}
+
 	public boolean longerThan(MusicItem that) {
 		// TODO Auto-generated method stub
 		return this.duration.longerThan(that);
 	}
+
 	/**
 	 * @return the duration
 	 */
 	public clockTime getDuration() {
 		return duration;
 	}
+
 	public String favoriteRate() {
 		// TODO Auto-generated method stub
-		if(this.hitCounts>40000)return "Hot";
-		if(this.hitCounts>2000 && this.hitCounts<40000)return "Phổ Biến";
+		if (this.hitCounts > 40000)
+			return "Hot";
+		if (this.hitCounts > 2000 && this.hitCounts < 40000)
+			return "Phổ Biến";
 		return "";
 	}
+
 	public int totalTime() {
 		// TODO Auto-generated method stub
 		return this.duration.totalTime();
 	}
-	
+
+	public boolean hasTimeThan(MusicItem first) {
+		// TODO Auto-generated method stub
+		return this.duration.longerThan(first);
+	}
+
 }
