@@ -10,6 +10,8 @@ public class libraryTest extends TestCase {
 		CD c = new CD(1023, "Nỗi Lòng Người Đi", null, 7, "anh Tho");
 
 		Magazine m = new Magazine(143, "Thế giới vi tính", "PC World VN", 3, 20);
+		
+		System.out.println(b+"\n"+c+"\n"+m);
 	}
 
 	Book b = new Book(102, "How to design class hierarchies", "MIT Press", 5, "Tin học", "Matthias Felleisen", 2004);

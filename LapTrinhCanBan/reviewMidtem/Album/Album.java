@@ -12,16 +12,16 @@ public class Album {
 		this.musicItem = musicItem;
 		this.singer = singer;
 	}
-	
+
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		if(this.publicYear!=0) {
-			
-		return "Album of singer \"" + this.title + "\", " + this.publicYear + "  của " + this.singer
-				+ " gồm các bản nhạc \r \n" + this.musicItem.toString();
+		if (this.publicYear != 0) {
+
+			return "Album of singer \"" + this.title + "\", " + this.publicYear + "  của " + this.singer
+					+ " gồm các bản nhạc \r \n" + this.musicItem.toString();
 		}
-		return "Album Tổng Hợp:\""+this.title+"\", bao gồm các bài: \r\n"+this.musicItem.toString()+"";
+		return "Album Tổng Hợp:\"" + this.title + "\", bao gồm các bài: \r\n" + this.musicItem.toString() + "";
 	}
 
 	public int howMany() {
@@ -34,7 +34,7 @@ public class Album {
 	}
 
 	public Album thisAuthor(String author) {
-		return new Album("của "+author,0, musicItem.thisAuthor(author),null);
+		return new Album("của " + author, 0, musicItem.thisAuthor(author), null);
 	}
 
 	public Album softByTime() {

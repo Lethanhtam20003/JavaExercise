@@ -5,5 +5,6 @@
 	<classpathentry kind="src" path="ExerciseExten"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/3"/>
+	<classpathentry kind="src" path="Paint_app(new)"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

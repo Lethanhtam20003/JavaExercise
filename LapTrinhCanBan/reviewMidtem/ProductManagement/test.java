@@ -85,6 +85,7 @@ public class test extends TestCase {
 	}
 
 	public void testSortByProducer() {
+		assertEquals(producer.checkNameThan(g2), false);
 		System.out.println("soft \n"+l.softByProducer());
 	}
 

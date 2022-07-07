@@ -25,7 +25,8 @@ public class Producer {
 
 	public boolean checkNameThan(ProductItems that) {
 		// TODO Auto-generated method stub
-		return this.nameProducer.indexOf(0) > that.producer.nameProducer.indexOf(0);
+		return this.nameProducer.compareTo(that.producer.nameProducer)>0;
+		//this.nameProducer.indexOf(0) > that.producer.nameProducer.indexOf(0)
 	}
 
 }

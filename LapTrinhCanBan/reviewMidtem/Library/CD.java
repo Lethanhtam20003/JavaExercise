@@ -26,4 +26,10 @@ public class CD extends library {
 		return (this.overDueDays(rentDays)*2000>10000)?10000:this.overDueDays(rentDays)*2000;
 	}
 
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return this.catID +", "+ this.title +", "+ this.publisher +", "+ this.dueDay +", "+ this.artist;
+	}
+
 }

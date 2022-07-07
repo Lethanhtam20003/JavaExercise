@@ -1,6 +1,5 @@
 package Album;
 
-import EX3_4.ClockTime;
 import junit.framework.TestCase;
 
 public class testAlbum extends TestCase {

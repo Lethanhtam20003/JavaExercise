@@ -8,22 +8,32 @@ public class Magazine extends library {
 		this.no = no;
 	}
 
+	
+
 	@Override
 	public boolean smallerThan(library that) {
 		// TODO Auto-generated method stub
-		return this.catID<that.catID;
+		return this.catID < that.catID;
 	}
 
 	@Override
 	public int overDueDays(int rentDays) {
 		// TODO Auto-generated method stub
-		return (this.dueDay<rentDays)?rentDays - this.dueDay:0;
+		return (this.dueDay < rentDays) ? rentDays - this.dueDay : 0;
 	}
 
 	@Override
 	public int fine(int rentDays) {
 		// TODO Auto-generated method stub
-		return this.overDueDays(rentDays)*1000;
+		return this.overDueDays(rentDays) * 1000;
+	}
+
+
+
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return this.catID +", "+ this.title +", "+ this.publisher +", "+ this.dueDay +", "+ this.no;
 	}
 
 }

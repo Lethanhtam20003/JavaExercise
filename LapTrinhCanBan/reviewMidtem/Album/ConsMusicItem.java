@@ -10,6 +10,18 @@ public class ConsMusicItem implements IMusicItem {
 	}
 
 	@Override
+	public boolean equals(Object obj) {
+		// TODO Auto-generated method stub
+		if (obj == null || !(obj instanceof ConsMusicItem)) {
+			return false;
+		} else {
+			ConsMusicItem that = (ConsMusicItem) obj;
+
+			return this.first.equals(that.first)&& this.rest.equals(that.rest);
+		}
+	}
+
+	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
 		return this.first.toString() + "\n\r" + this.rest.toString();
