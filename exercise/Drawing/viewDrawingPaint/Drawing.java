@@ -2,11 +2,18 @@ package viewDrawingPaint;
 
 import java.awt.Color;
 import java.awt.Graphics;
+import java.awt.event.ActionEvent;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.beans.PropertyChangeListener;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.swing.AbstractButton;
+import javax.swing.Action;
+import javax.swing.JButton;
 import javax.swing.JMenuItem;
 import javax.swing.JPanel;
 import javax.swing.JPopupMenu;
@@ -16,6 +23,7 @@ import model.ShapeAbstract;
 import model.circle;
 import model.dot;
 import model.line;
+import model.paint;
 import model.restangle;
 
 public class Drawing extends JPanel {
@@ -94,9 +102,50 @@ public class Drawing extends JPanel {
 			}
 		};
 
-		this.addMouseListener(a);
-		this.addMouseMotionListener(a);
-		// this.addMouseListener(app.adapterPupupMenu);
+		addMouseListener(a);
+		addMouseMotionListener(a);
+		addKeyListener(new KeyListener() {
+
+			@Override
+			public void keyTyped(KeyEvent e) {
+				// TODO Auto-generated method stub
+
+			}
+
+			@Override
+			public void keyReleased(KeyEvent e) {
+				// TODO Auto-generated method stub
+
+			}
+
+			@Override
+			public void keyPressed(KeyEvent e) {
+				// TODO Auto-generated method stub
+				int keycode = e.getKeyCode();
+				if (e.isControlDown()) {
+					System.out.println("ds");
+					switch (keycode) {
+					case (KeyEvent.VK_D):
+						setShapeType(toolbar.dot);
+						break;
+					case (KeyEvent.VK_L):
+						setShapeType(toolbar.line);
+						break;
+					case (KeyEvent.VK_R):
+						setShapeType(toolbar.rectangle);
+						break;
+					case (KeyEvent.VK_C):
+						setShapeType(toolbar.circle);
+						break;
+					case (KeyEvent.VK_P):
+						setShapeType(toolbar.paint);
+						break;
+					}
+					return;
+				}
+
+			}
+		});
 	}
 
 	@Override

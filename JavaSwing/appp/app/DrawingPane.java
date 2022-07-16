@@ -106,6 +106,7 @@ public class DrawingPane extends JPanel {
 				}
 
 				if (e.isAltDown()) { // Color: Ctrl-R, -G, -B
+					System.out.println("dsd");
 					switch (keyCode) {
 					case KeyEvent.VK_R:
 						setColor(Color.RED);
