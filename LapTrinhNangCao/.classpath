@@ -3,6 +3,8 @@
 	<classpathentry kind="src" path="BaiToanCoban"/>
 	<classpathentry kind="src" path="BaiToanNangCao"/>
 	<classpathentry kind="src" path="ExerciseExten"/>
+	<classpathentry kind="src" path="reviewMid_LTNC"/>
+	<classpathentry kind="src" path="De2020_2021"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/3"/>
 	<classpathentry kind="src" path="Paint_app(new)"/>
